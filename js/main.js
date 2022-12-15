@@ -10,8 +10,9 @@ function getData(form) {
        console.log("finns redan")
       }else{
         console.log("finns inte")
-        bookings.push(booking);
       }
+      bookings.push(booking);
+      console.log(bookings)
   }
 
   //eventlistener for the tablebooking
