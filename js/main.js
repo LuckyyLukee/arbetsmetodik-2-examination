@@ -6,12 +6,11 @@ function getData(form) {
     let tablebooking = Object.fromEntries(formData);
     let booking = new table(tablebooking.name, tablebooking.selectTable);
     if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
-        bookings.pop();
        console.log("finns redan")
       }else{
         console.log("finns inte")
+        bookings.push(booking);
       }
-      bookings.push(booking);
       console.log(bookings)
   }
 
