@@ -1,3 +1,11 @@
+@font-face { 
+    font-family: krakenIn;
+    src: url(font/CARIC___.TTF);
+} 
+@font-face {
+    font-family: pirate;
+    src: url(font/TreasureMapDeadhand-yLA3.ttf);
+}
 
 * {
     margin: 0;
@@ -8,7 +16,7 @@
 
 
 :root{
-    --main-bg-color:#449FAF;
+    --main-bg-color:#364d7f;
     --board-bg-color:#B1F4FC;
     --text-color:#F4D499;
     --darkblue-color:#395461;
@@ -16,44 +24,99 @@
     --black-color:#010307;
     }
 
+    
 body {
     background-color: var(--main-bg-color);
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+    font-size: 2em;
     display: block;
   }
   
-.container{
-    max-width: 900px;
-    background-color: #ebe6ee;
+.container {
+    min-height: 100vh;
+    background-color: rgb(231, 232, 237);
     margin: 0 auto;
     position: relative;
 }
 
-header{
+.main-header {
+    color: var(--board-bg-color);
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: 60px;   /* Height of the footer */
-    background: var(--darkblue-color)
+    height: 16em;  
+    position: relative; 
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-    
-.hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/hero.jpg");
-    max-width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+
+.main-header h1 {
+    padding: 1em 1em 0em 1em; 
+    font-family: pirate;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-  
-.hero-text {
-    font-size: 2rem;
+
+.cart-icon {
+    width: 80px; 
+    position: absolute; 
+    top: 18%;
+    right: 7%; 
+    background-color: white;
+    padding: 0.4em;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.main-nav {
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em; 
+    text-transform: uppercase;
+}
+
+.list-item {
+    list-style: none; 
+    font-size: 1.3em;
+    color: #fff; 
+    /* border: 1px solid black; */
+    width: 30%;
+    border-radius: 15px;
     text-align: center;
-    color:var(--text-color)
+    padding: 0.5em 0;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    /* font-family: krakenIn; */
+}
+
+.list-item:hover {
+    background-color: rgba(56, 72, 135, 0.08);
+}
+
+.search-bar {
+    width: 70%;
+    font-size: 1.5em;
+    margin: 1em auto; 
+    margin-top: 0; 
+    padding: 0.2em; 
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border: none; 
 }
 
 .footer{
     bottom: 0;
     width: 100%;
     height: 60px;   /* Height of the footer */
-    background: var(--darkblue-color)
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
+    position: sticky;
+    bottom: 0;
+    padding: 0.5em; 
+    color: white;
 }
