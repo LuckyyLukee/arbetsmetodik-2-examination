@@ -14,8 +14,9 @@ function getData(form) {
       }
       console.log(bookings)
   }
-
-prod.createCards()
+  let product = new products(db);
+  //takes 2 parameters 1 for db one for drinks,bbq,exc
+    product.createCards(db,6);
 
   //eventlistener for the tablebooking
   document.getElementById("tableform").addEventListener("submit", function (e) {

@@ -1,16 +1,28 @@
 class products{
     constructor(db){
-        this.db = Object.entries(db);
+        this.db = db;
+        this.filter =[
+            "bbqs",
+            "best-foods",
+            "breads",
+            "burgers",
+            "chocolates",
+            "desserts",
+            "drinks",
+            "fried-chicken",
+            "ice-cream",
+            "pizzas",
+            "porks",
+            "sandwiches",
+            "sausages",
+            "steaks",
+            "our-foods"
+        ]
     }
-    createCards(prod){
-       //fix function to select drinks,bbq exc
-        for(let i=0; i < this.db[15][1].drinks; i++){
-            //LOOP FOR CARDS
-            console.log(this.db[6][1][i].id)
-            console.log(this.db[6][1][i].name)
-            console.log(this.db[6][1][i].price)
-          }
-          
+    createCards(db,number){
+        db[this.filter[number]].forEach(element => {
+            let {id, img, name, dsc, price, rate} = element;
+            console.log(element)
+          });
     }
-    
 }
