@@ -7,5 +7,8 @@ class table{
     order(orders){
         return orders;
     }
+    drinkMenu(db){
+     
+    }
     
 }
