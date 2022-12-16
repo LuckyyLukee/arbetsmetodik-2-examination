@@ -95,6 +95,10 @@ body {
     /* font-family: krakenIn; */
 }
 
+.list-item:hover {
+    background-color: rgba(56, 72, 135, 0.08);
+}
+
 .search-bar {
     width: 70%;
     font-size: 1.5em;
