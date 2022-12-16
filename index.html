@@ -1,46 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Webshop</title>
-    <meta name="description" content="Webshop">
-    <meta name="keywords" content="bar">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <meta name="description" text="Webshop" />
+    <meta name="keywords" text="bar" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/card.css" />
+  </head>
+  <body>
     <div class="container">
-
-        <div class="hero-image">
-            <div class="hero-text">
-                <h1>Best bar in town</h1>
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>Best bar in town</h1>
+        </div>
+      </div>
+      <header>
+        <p>
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </p>
+      </header>
+      <div class="tableform">
+        <form id="tableform" name="tableform" action="">
+          <label>Name: </label>
+          <input id="name" name="name" value="name" />
+          <label for="deck">Choose your table</label>
+          <select name="selectTable" id="SelectTable">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <input class="button" type="submit" value="book" />
+        </form>
+      </div>
+      <section class="featured">
+        <!-- <div class="filter">
+          <button>All</button>
+          <button>Food</button>
+          <button>Drinks</button>
+        </div> -->
+        <h1>Todays features</h1>
+        <div class="featured-grid">
+          
+          <!-- <div class="card">
+            <img
+              class="card-img"
+              src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/79619/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
+              alt=""
+            />
+            <div class="card-text">
+              <h2>Spicy Nacho plate</h2>
+              <p>Rate: 4.2</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Veniam.
+              </p>
+              <span class="card-price">64.8 kr</span>
             </div>
-        </div>
-        <header>
-            <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-        </header>
-        <div class="tableform">
-            <form id="tableform" name="tableform" action="">
-                <label>Name: </label>
-                <input id="name" name="name" value="name">
-                <label for="deck">Choose your table</label>
-                <select name="selectTable" id="SelectTable">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                </select>
-                <input class="button" type="submit" value="book">
-            </form>
-        </div>
-        <footer class="footer">
-            <p>Future footer</p>
-          </footer>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/66752/carolina-bbq-oink-sampler.1340b5a10cedc238cb2280306dd1d5a5.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
+              alt=""
+            />
+            <div class="card-text">
+              <h2>Carlsberg Export 50cl</h2>
+              <p>Rate: 5</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Veniam.
+              </p>
+              <span class="card-price">64.8 kr</span>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/108725/hong-kong-boba-tea-kit-for-6.63841de36d8e5edfafa13023fc303285.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
+              alt=""
+            />
+            <div class="card-text">
+              <h2>Haloumi and sweet potato fries</h2>
+              <p>Rate: 3.2</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Veniam.
+              </p>
+              <span class="card-price">64.8 kr</span>
+            </div>
+            <button class="add-to-cart">add to cart</button>
+          </div>
+          <div class="card">
+            <img
+              class="card-img"
+              src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/79619/joes-kc-ribs-brisket-and-burnt-ends.6710e994980e485e6441b794717ad6fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
+              alt=""
+            />
+            <div class="card-text">
+              <h2>Spicy Nacho plate</h2>
+              <p>Rate: 4.2</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Veniam.
+              </p>
+              <span class="card-price">64.8 kr</span>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/66752/carolina-bbq-oink-sampler.1340b5a10cedc238cb2280306dd1d5a5.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
+              alt=""
+            />
+            <div class="card-text">
+              <h2>Carlsberg Export 50cl</h2>
+              <p>Rate: 5</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Veniam.
+              </p>
+              <span class="card-price">64.8 kr</span>
+            </div>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/134182/mighty-quinns-bbq-sampler-pack.1bfe4a0665edc565756f5241bf25840e.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
+              alt=""
+            />
+            <div class="card-text">
+              <h2>Haloumi and sweet potato fries</h2>
+              <p>Rate: 3.2</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Veniam.
+              </p>
+              <span class="card-price">64.8 kr</span>
+            </div>
+            <button class="add-to-cart">add to cart</button>
+          </div> -->
+      </section>
+      <footer class="footer">
+        <p>Future footer</p>
+      </footer>
     </div>
-  
-</body>
+  </body>
 
-<script src="/js/tables.js"></script>
-<script src="/js/main.js"></script>
-</html>
+  <script src="db.js"></script>
+  <script src="/js/tables.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/card.js"></script>
+  </html>
