@@ -19,7 +19,7 @@ class products{
             "our-foods"
         ]
     }
-    createCards(db,number){
+    createCards(db,number,maincontainer){
         db[this.filter[number]].forEach(element => {
             let {id, img, name, dsc, price, rate} = element;
             console.log(element)

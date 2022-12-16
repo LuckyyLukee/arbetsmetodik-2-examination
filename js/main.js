@@ -1,4 +1,4 @@
-
+const cardContainer = document.querySelector('.featured-grid')
 const bookings = [];
 // get data from the form
 function getData(form) {
@@ -14,9 +14,10 @@ function getData(form) {
       }
       console.log(bookings)
   }
+  //create object products
   let product = new products(db);
   //takes 2 parameters 1 for db one for drinks,bbq,exc
-    product.createCards(db,6);
+    product.createCards(db,6,cardContainer);
 
   //eventlistener for the tablebooking
   document.getElementById("tableform").addEventListener("submit", function (e) {
