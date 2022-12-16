@@ -51,5 +51,20 @@ class products{
         `;
         cardContainer.appendChild(card)
           });
+
+       
+
+        // Eventlistener on add-to-cart buttons
+        const addBtn = document.querySelectorAll(".add-to-cart");
+        addBtn.forEach(button => {
+            button.addEventListener("click", function (e) {
+                let product = e.target.parentElement
+                shoppingCart.push(product)
+                const badge = document.querySelector(".badge");
+                badge.innerHTML = shoppingCart.length;
+            })
+        })
+
     }
 }
+

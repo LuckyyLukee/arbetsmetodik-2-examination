@@ -1,4 +1,7 @@
-const cardContainer = document.querySelector('.featured-grid')
+const cardContainer = document.querySelector('.featured-grid');
+ // ShoppingCart
+let shoppingCart = [];
+
 const bookings = [];
 // get data from the form
 function getData(form) {
@@ -25,15 +28,17 @@ function getData(form) {
     getData(e.target);
   })
 
+
 const buttons = document.querySelectorAll(".list-item");
 
+// Eventlisteners for list-items
 buttons.forEach(button => {
   button.addEventListener("click", function (e) {
     let id = e.target.id;
 
+    // remove previus cards from DOM
     let cards = document.querySelectorAll(".card");
         cards.forEach(card=> {
-            console.log("this: ", card)
             card.remove()
         });
 
