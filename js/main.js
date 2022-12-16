@@ -24,3 +24,21 @@ function getData(form) {
     e.preventDefault();
     getData(e.target);
   })
+
+const buttons = document.querySelectorAll(".list-item");
+
+buttons.forEach(button => {
+  button.addEventListener("click", function (e) {
+    let id = e.target.id;
+
+    let cards = document.querySelectorAll(".card");
+        cards.forEach(card=> {
+            console.log("this: ", card)
+            card.remove()
+        });
+
+    product.createCards(db,id,cardContainer);
+
+  })
+});
+

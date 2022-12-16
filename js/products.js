@@ -22,8 +22,6 @@ class products{
     createCards(db,number,maincontainer){
         db[this.filter[number]].forEach(element => {
 
-
-
         let card = document.createElement("div");
         card.classList.add("card")
         
