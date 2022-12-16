@@ -90,6 +90,7 @@ body {
     height: 60px; 
     background-color: var(--board-bg-color);
     border-radius: 50%;
+    visibility: hidden;
 }
 
 .main-nav {
