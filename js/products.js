@@ -52,8 +52,6 @@ class products{
         cardContainer.appendChild(card)
           });
 
-       
-
         // Eventlistener on add-to-cart buttons
         const addBtn = document.querySelectorAll(".add-to-cart");
         addBtn.forEach(button => {

@@ -1,6 +1,6 @@
 const cardContainer = document.querySelector('.featured-grid');
  // ShoppingCart
-let shoppingCart = [];
+let shoppingCart = []
 
 const bookings = [];
 // get data from the form
@@ -43,7 +43,8 @@ buttons.forEach(button => {
         });
 
     product.createCards(db,id,cardContainer);
-
   })
 });
+
+
 
