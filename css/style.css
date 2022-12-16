@@ -1,11 +1,10 @@
-@font-face {
-    font-family: pirate;
-    src: url(fonts/TreasureMapDeadhand-yLA3.ttf);
+@font-face { 
+    font-family: krakenIn;
+    src: url(fonts/CARIC___.TTF);
 } 
 @font-face {
     font-family: pirate;
     src: url(fonts/TreasureMapDeadhand-yLA3.ttf);
-
 }
 
 * {
@@ -125,7 +124,6 @@ body {
     bottom: 0;
     padding: 0.5em; 
     color: white;
-
 }
 
 .tableform {
