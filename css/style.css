@@ -1,6 +1,6 @@
 @font-face { 
     font-family: krakenIn;
-    src: url(font/CaptainsTable-nLdY.ttf);
+    src: url(font/CARIC___.TTF);
 } 
 @font-face {
     font-family: pirate;
@@ -16,7 +16,7 @@
 
 
 :root{
-    --main-bg-color:#4484af;
+    --main-bg-color:#364d7f;
     --board-bg-color:#B1F4FC;
     --text-color:#F4D499;
     --darkblue-color:#395461;
@@ -28,78 +28,53 @@
 body {
     background-color: var(--main-bg-color);
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2em;
     display: block;
   }
   
 .container {
-    min-height: 89vh; 
-    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
-    opacity: 0.9;
-    background-color: var(--main-bg-color);
+    min-height: 100vh;
+    background-color: rgb(231, 232, 237);
     margin: 0 auto;
     position: relative;
 }
 
 .main-header {
-    text-align: center;
+    padding-top: 1em; 
     color: var(--board-bg-color);
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
 }
 
 .main-header h1 {
-    background: url(/img/wood-g3bdc269eb_1920.jpg);
-    background-size: cover; 
-    -webkit-text-fill-color: transparent;
- -webkit-background-clip: text;
- -moz-background-clip:text;
-    background-clip: text; 
-    padding: 0.5em; 
-    font-family: krakenIn;
-    font-size: 2.6em;
-    color: rgb(61, 54, 54);
+    padding: 1em; 
+    font-family: pirate;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
     text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.main-header p {
-    background: url(/img/wood-g3bdc269eb_1920.jpg);
-    background-size: cover; 
-    -webkit-text-fill-color: transparent;
- -webkit-background-clip: text;
- -moz-background-clip:text;
-    background-clip: text; 
-    font-family: pirate; 
-    font-size: 2.5em;
-    color: rgb(61, 54, 54);
-    text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
 
 header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 11em;   /* Height of the footer */
+    height: 13em;   /* Height of the footer */
     background: var(--main-bg-color);
     position: relative; 
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.header-img-logo {
-    position: absolute;
-    top: 9%; 
-    left: 5%; 
-    width: 90px;
-}
-
-.header-img-nav {
+.cart-icon {
+    width: 80px; 
     position: absolute; 
-    width: 90px; 
-    top: 9%;
-    right: 5%;
+    top: 35%;
+    right: 7%; 
+    background-color: white;
+    padding: 0.4em;
+    border-radius: 50%;
 }
-
-
 .main-nav {
     width: 100%;
 }
@@ -115,25 +90,11 @@ header{
 
 .list-item {
     list-style: none; 
-    /* border: 1px solid black; */
-    /* padding: 0.79em 3.65em;
-    box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-    border-radius: 15px; */
     font-size: 1.3em;
-    color: black; 
-    font-family: pirate;
+    color: #fff; 
+    /* font-family: krakenIn; */
 }
 
-
-    
-/* .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/hero.jpg");
-    max-width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-} */
   
 .hero-text {
     font-size: 2rem;
@@ -145,6 +106,9 @@ header{
     bottom: 0;
     width: 100%;
     height: 60px;   /* Height of the footer */
-    background: var(--darkblue-color)
-    
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
+    position: sticky;
+    bottom: 0;
+    padding: 0.5em; 
+    color: white;
 }
