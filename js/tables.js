@@ -4,11 +4,8 @@ class table{
         this.tablenumber = tablenumber;
         this.isbooked = isbooked;
     }
-    order(orders){
-        return orders;
-    }
-    drinkMenu(db){
-     
+    getTable(){
+        return this.name + this.tablenumber;
     }
     
 }
