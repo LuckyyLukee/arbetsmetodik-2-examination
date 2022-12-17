@@ -12,6 +12,10 @@ orderproducts.eventHandler(btn);
 function getProduct(product){
   console.log(product.parentNode.getAttribute('id'))
   orderproducts.calcPrice(product.parentNode.getAttribute('id'))
+  for(book in bookings){
+    console.log(bookings);
+  }
+
  } 
 // get data from the form, move to table class?
 function getData(form) {
