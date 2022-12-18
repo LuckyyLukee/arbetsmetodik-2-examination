@@ -15,10 +15,14 @@ class table{
         console.log(this.orders)
     } 
     showOrders(maincontainer){
-            let info = document.createElement("div");
-            info.innerHTML = this.orders;
-            maincontainer.append('table number: ' + this.tablenumber + ' ' , this.name)
-            maincontainer.append(info);
+            document.querySelectorAll(".info").forEach(el => el.remove());
+            for(let i = 0; i < this.orders.length; i++){
+                let info = document.createElement("div");
+                info.className = "info"
+                info.innerHTML = this.orders[i]
+                maincontainer.append(info);
+            }
+      
     }
     
 }
