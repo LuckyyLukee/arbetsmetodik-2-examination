@@ -1,7 +1,6 @@
 class products{
     constructor(db){
         this.db = db;
-        this.orders = [];
         this.filter =[
             "bbqs",
             "best-foods",
@@ -25,7 +24,8 @@ class products{
         let card = document.createElement("div");
         card.classList.add("card")
         let {id, img, name, dsc, price, rate} = element;
-        card.setAttribute("id", id,)
+        card.setAttribute("id", name,)
+        card.setAttribute("price" , price)
             card.innerHTML = `
         <img
             class="card-img"
@@ -45,15 +45,20 @@ class products{
         cardContainer.appendChild(card)
           });
     }
-    eventHandler(btn){
-        for (var i = 0; i < btn.length; i++) {
+    eventHandlerBtns(btns){
+        for (let i = 0; i < btn.length; i++) {
             btn[i].addEventListener("click", function (e) {
             getProduct(e.target);
             })
            }
         }
-    calcPrice(products){
-        this.orders.push(products);
-        console.log(this.orders)
-    } 
+        eventHandlerMenu(listmenu){
+            for (let i = 0; i < listmenu.length; i++) {
+                listmenu[i].addEventListener("click", function (e) {
+                createprodcuts(e);
+              
+                })
+               }
+            }
+
 }

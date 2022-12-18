@@ -1,23 +1,45 @@
+//random variabels
 const cardContainer = document.querySelector('.featured-grid')
 const  btn = document.getElementsByTagName('button');
 const tableform = document.querySelector('tableform')
+const listmenu = document.querySelectorAll('li');
+const order = document.querySelector('.orders')
 const bookings = [];
-//create object products
+//create object orderproducts
 let orderproducts = new products(db);
 //takes 2 parameters 1 for db one for drinks,bbq,exc
-orderproducts.createCards(6,cardContainer);
-orderproducts.eventHandler(btn);
 
-//get id from products clicked do calculations in product class
+//Create eventhandlers for btns and menu for products
+orderproducts.eventHandlerBtns(btn);
+orderproducts.eventHandlerMenu(listmenu);
+
+
+//to switch items in menu
+function createprodcuts(e){
+  document.querySelectorAll(".card").forEach(el => el.remove());
+  if(e.target.textContent == 'Food'){
+    orderproducts.createCards(8,cardContainer);
+    orderproducts.eventHandlerBtns(btn);
+  orderproducts.eventHandlerMenu(listmenu);
+}
+if(e.target.textContent == 'Snacks'){
+  orderproducts.createCards(2,cardContainer);
+  orderproducts.eventHandlerBtns(btn);
+orderproducts.eventHandlerMenu(listmenu);
+}
+if(e.target.textContent == 'Drinks'){
+  orderproducts.createCards(6,cardContainer);
+  orderproducts.eventHandlerBtns(btn);
+orderproducts.eventHandlerMenu(listmenu);
+}
+}
+//Get the orders, do methods in table class
 function getProduct(product){
-  console.log(product.parentNode.getAttribute('id'))
-  orderproducts.calcPrice(product.parentNode.getAttribute('id'))
-  for(book in bookings){
-    console.log(bookings);
-  }
-
+  bookings[0].getOrders(product.parentNode.getAttribute('id'), product.parentNode.getAttribute('price'));
+  bookings[0].showOrders(order)
  } 
-// get data from the form, move to table class?
+
+// get data from the form, create a object table in bookings array
 function getData(form) {
     let formData = new FormData(form);
     let tablebooking = Object.fromEntries(formData);
@@ -30,6 +52,7 @@ function getData(form) {
         bookings.push(booking);
       }
   }
+
 
   //eventlistener for the tablebooking
   document.getElementById("tableform").addEventListener("submit", function (e) {
