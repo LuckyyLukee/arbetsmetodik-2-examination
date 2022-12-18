@@ -19,19 +19,15 @@ function createprodcuts(e){
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.textContent == 'Food'){
     orderproducts.createCards(8,cardContainer);
-    orderproducts.eventHandlerBtns(btn);
-  orderproducts.eventHandlerMenu(listmenu);
 }
 if(e.target.textContent == 'Snacks'){
   orderproducts.createCards(2,cardContainer);
-  orderproducts.eventHandlerBtns(btn);
-orderproducts.eventHandlerMenu(listmenu);
 }
 if(e.target.textContent == 'Drinks'){
   orderproducts.createCards(6,cardContainer);
-  orderproducts.eventHandlerBtns(btn);
-orderproducts.eventHandlerMenu(listmenu);
 }
+orderproducts.eventHandlerBtns(btn);
+orderproducts.eventHandlerMenu(listmenu);
 }
 //Get the orders, do methods in table class
 function getProduct(product){
