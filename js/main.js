@@ -13,6 +13,13 @@ let orderproducts = new products(db);
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
 
+//remove orders
+//remove orders
+function removeOrder(e, x){
+
+  bookings[0].orders.splice(x, 1)
+      bookings[0].showOrders(order);
+}
 
 //to switch items in menu
 function createprodcuts(e){
@@ -57,6 +64,3 @@ function getData(form) {
   })
 
 
-
-
-  

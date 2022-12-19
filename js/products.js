@@ -27,13 +27,6 @@ class products{
         card.setAttribute("id", name,)
         card.setAttribute("price" , price)
             card.innerHTML = `
-    createCards(db,number,maincontainer){
-        db[this.filter[number]].forEach(element => {
-        let card = document.createElement("div");
-        card.classList.add("card")
-        let {id, img, name, dsc, price, rate} = element;
-        card.setAttribute("id", id)
-            card.innerHTML = `
         <img
             class="card-img"
             src=${img}
