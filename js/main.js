@@ -22,7 +22,7 @@ function createprodcuts(e){
   if(e.target.textContent == 'Food'){
     orderproducts.createCards(0,cardContainer);
 }
-if(e.target.textContent == 'Snacks'){
+if(e.target.textContent == 'Sweets'){
   orderproducts.createCards(5,cardContainer);
 }
 if(e.target.textContent == 'Drinks'){
@@ -53,8 +53,9 @@ function getData(form) {
 
   function styleTableBooking() { // function for visibility
     let bookVisibility = document.querySelector(".tableform");
-    let featuresVisibility = document.querySelector('.')
+    let featuresVisibility = document.querySelector('.featured h1')
     bookVisibility.style.visibility = "hidden";
+    featuresVisibility.style.visibility = "visible";
   }
 
   //eventlistener for the tablebooking
