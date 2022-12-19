@@ -3,24 +3,6 @@ const searchResults = document.querySelector(".search-results")
 const list = document.querySelector(".list");
 // const filter = input.value.toLowerCase();
 
-
-// function searchFor() {
-//     for (i = 0; i < db.bbqs.length; i++) {
-//         if (input == db.bbqs.name || db.bbqs.id){
-//             setList();
-//         }
-//     }
-// }
-// function searchFor() {
-//     for (let i = 0; i < db.length; i++){
-//         for (let j = 0; j < db[i].length; j++){
-//             if (input == db[i].name || db[i].id ) {
-//                 let result = db[i].name;
-//             }
-//         }
-//     }
-// }
-
 function setList(results) {
     for (let item of results) {
         const resultItem = document.createElement('li')
