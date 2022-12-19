@@ -155,6 +155,7 @@ body {
     background-image: url(/img/wood-g3bdc269eb_1920.jpg);
     padding: 0.5em; 
     color: white;
+    visibility: hidden;
 }
 
 /* .tableform {

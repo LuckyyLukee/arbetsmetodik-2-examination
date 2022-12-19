@@ -60,8 +60,8 @@ function getData(form) {
 function styleCart() {
   const bookVisibility = document.querySelector('.tableform');
   const featuresVisibility = document.querySelector('.featured > h1')
-  bookVisibility.style.Visibility = "hidden";
-  featuresVisibility.style.Visibility = "visible";
+  bookVisibility.style.visibility = "hidden";
+  featuresVisibility.style.visibility = "visible";
 }
 
 
