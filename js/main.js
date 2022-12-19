@@ -3,10 +3,9 @@ const cardContainer = document.querySelector('.featured-grid')
 const  btn = document.getElementsByTagName('button');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
-const order = document.querySelector('.orders')
-const showOrders = document.querySelector('.ordersection');
+const order = document.querySelector('.orders');
+const sumTotal = document.querySelector('.sum-total');
 const bookings = [];
-let textLanguage = "english";
 //create object orderproducts
 let orderproducts = new products(db);
 //takes 2 parameters 1 for db one for drinks,bbq,exc
@@ -15,6 +14,13 @@ let orderproducts = new products(db);
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
 
+//remove orders
+//remove orders
+function removeOrder(e, x){
+
+  bookings[0].orders.splice(x, 1)
+      bookings[0].showOrders(order);
+}
 
 //to switch items in menu
 function createprodcuts(e){
@@ -22,7 +28,7 @@ function createprodcuts(e){
   if(e.target.textContent == 'Food'){
     orderproducts.createCards(0,cardContainer);
 }
-if(e.target.textContent == 'Sweets'){
+if(e.target.textContent == 'Snacks'){
   orderproducts.createCards(5,cardContainer);
 }
 if(e.target.textContent == 'Drinks'){
@@ -43,27 +49,27 @@ function getData(form) {
     let tablebooking = Object.fromEntries(formData);
     let booking = new table(tablebooking.name, tablebooking.selectTable);
     if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
-       console.log("Already booked")
+       console.log("finns redan")
        alert("booked");
       }else{
-        console.log("Free")
+        console.log("finns inte")
         bookings.push(booking);
       }
   }
 
-  function styleTableBooking() { // function for visibility
-    let bookVisibility = document.querySelector(".tableform");
-    let featuresVisibility = document.querySelector('.featured  > h1')
-    bookVisibility.style.visibility = "hidden";
-    featuresVisibility.style.visibility = "visible";
-  }
+function styleCart() {
+  const bookVisibility = document.querySelector('.tableform');
+  const featuresVisibility = document.querySelector('.featured > h1')
+  bookVisibility.style.Visibility = "hidden";
+  featuresVisibility.style.Visibility = "visible";
+}
+
 
   //eventlistener for the tablebooking
   document.getElementById("tableform").addEventListener("submit", function (e) {
     e.preventDefault();
     getData(e.target);
-    styleTableBooking(); // Function for visibility
+    styleCart();
   })
 
 
-  

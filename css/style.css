@@ -162,8 +162,10 @@ body {
     visibility: hidden;
 } */
 
+
 .checkout-btn {
-    align-items: flex-start;
+    position: absolute; 
+    z-index: 100;
     background-color: rgba(56, 72, 135, 0.2);
     border: none; 
     font-size: 1em;
@@ -173,10 +175,12 @@ body {
     text-align: center;
     padding: 0.5em 0;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    margin: 0 0 1em 0; 
+    margin: 1em 0 0 0; 
+    float: left; 
 }
 
-.orders {
+.ordersection {
+    display: flex;
     position: relative; 
     background-image: url(/img/wood-g3bdc269eb_1920.jpg);
     color: white;
@@ -193,6 +197,29 @@ body {
     visibility: hidden;
     animation: slide-in 1500ms ease; 
     font-size: 1.1em;
+}
+
+.orders {
+    padding: 0.5em; 
+}
+
+.in-cart{
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+.sum-total {
+    border-top: 1px solid white; 
+    padding-top: 0.5em; 
+}
+
+.btninfo {
+    width: 2em; 
+    height: 2em; 
+    margin: 0 0 0 1em; 
+    border-radius: 50%;
+    font-size: 0.8em;
+    text-align: center;
 }
 
 
