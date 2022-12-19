@@ -25,10 +25,10 @@ function removeOrder(e, x){
 function createprodcuts(e){
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.textContent == 'Food'){
-    orderproducts.createCards(8,cardContainer);
+    orderproducts.createCards(0,cardContainer);
 }
 if(e.target.textContent == 'Snacks'){
-  orderproducts.createCards(2,cardContainer);
+  orderproducts.createCards(5,cardContainer);
 }
 if(e.target.textContent == 'Drinks'){
   orderproducts.createCards(6,cardContainer);
