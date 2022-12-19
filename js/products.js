@@ -49,9 +49,6 @@ class products{
         for (let i = 0; i < btn.length; i++) {
             btn[i].addEventListener("click", function (e) {
             getProduct(e.target);
-            let orders = document.querySelector(".orders");
-            orders.style.visibility = "visible";
-            
             })
            }
         }
