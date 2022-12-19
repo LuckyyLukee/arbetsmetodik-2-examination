@@ -18,6 +18,7 @@ class table{
     } 
     showOrders(maincontainer){
             document.querySelectorAll(".info").forEach(el => el.remove());
+            console.log(product)
             for(let i = 0; i < this.orders.length; i++){
                 let info = this.createDom();
                 let x = [i];

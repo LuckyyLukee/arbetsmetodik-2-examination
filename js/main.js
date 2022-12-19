@@ -24,14 +24,14 @@ function removeOrder(e, x){
 //to switch items in menu
 function createprodcuts(e){
   document.querySelectorAll(".card").forEach(el => el.remove());
-  if(e.target.textContent == 'Food'){
-    orderproducts.createCards(8,cardContainer);
-}
-if(e.target.textContent == 'Snacks'){
-  orderproducts.createCards(2,cardContainer);
-}
 if(e.target.textContent == 'Drinks'){
-  orderproducts.createCards(6,cardContainer);
+    orderproducts.createCards(6,cardContainer);
+}
+if(e.target.textContent == 'Food'){
+  orderproducts.createCards(0,cardContainer);
+}
+if(e.target.textContent == 'Sweets'){
+  orderproducts.createCards(5,cardContainer);
 }
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
