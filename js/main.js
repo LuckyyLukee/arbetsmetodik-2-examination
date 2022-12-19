@@ -3,7 +3,8 @@ const cardContainer = document.querySelector('.featured-grid')
 const  btn = document.getElementsByTagName('button');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
-const order = document.querySelector('.orders')
+const order = document.querySelector('.orders');
+const sumTotal = document.querySelector('.sum-total');
 const bookings = [];
 //create object orderproducts
 let orderproducts = new products(db);
@@ -56,11 +57,19 @@ function getData(form) {
       }
   }
 
+function styleCart() {
+  const bookVisibility = document.querySelector('.tableform');
+  const featuresVisibility = document.querySelector('.featured > h1')
+  bookVisibility.style.Visibility = "hidden";
+  featuresVisibility.style.Visibility = "visible";
+}
+
 
   //eventlistener for the tablebooking
   document.getElementById("tableform").addEventListener("submit", function (e) {
     e.preventDefault();
     getData(e.target);
+    styleCart();
   })
 
 
