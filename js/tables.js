@@ -8,6 +8,9 @@ class table{
         console.log(this.name, this.tablenumber)
         return this.name + this.tablenumber;
     }
+    drinkMenu(db){
+     
+    }
     
     getOrders(products,price){
         const product = [products, parseInt(price)]
