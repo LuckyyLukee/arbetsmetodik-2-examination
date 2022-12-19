@@ -161,3 +161,18 @@ body {
 /* .tableform {
     visibility: hidden;
 } */
+
+.orders {
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
+    color: white;
+    display: inline-block;
+    padding: 1em; 
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+    text-align: right;
+    position: fixed; 
+}

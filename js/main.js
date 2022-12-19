@@ -42,10 +42,10 @@ function getData(form) {
     let tablebooking = Object.fromEntries(formData);
     let booking = new table(tablebooking.name, tablebooking.selectTable);
     if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
-       console.log("finns redan")
+       console.log("Already booked")
        alert("booked");
       }else{
-        console.log("finns inte")
+        console.log("Free")
         bookings.push(booking);
       }
   }
@@ -58,3 +58,4 @@ function getData(form) {
   })
 
 
+  
