@@ -1,3 +1,4 @@
+
 //random variabels
 const cardContainer = document.querySelector('.featured-grid')
 const  btn = document.getElementsByTagName('button');
@@ -13,11 +14,6 @@ let orderproducts = new products(db);
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
 
-//remove orders
-function totalSum(){
-  const sum = bookings[0].orders[0].reduce((partialSum, a) => partialSum + a, 0);
-  console.log(sum)
-}
 //remove orders
 function removeOrder(e, x){
 
@@ -47,6 +43,11 @@ function getProduct(product){
  } 
 
 // get data from the form, create a object table in bookings array
+
+const cardContainer = document.querySelector('.featured-grid')
+const bookings = [];
+// get data from the form
+
 function getData(form) {
     let formData = new FormData(form);
     let tablebooking = Object.fromEntries(formData);
@@ -58,8 +59,14 @@ function getData(form) {
         console.log("finns inte")
         bookings.push(booking);
       }
+
   }
 
+  }
+  //create object products
+  let product = new products(db);
+  //takes 2 parameters 1 for db one for drinks,bbq,exc
+    product.createCards(db,6,cardContainer);
 
   //eventlistener for the tablebooking
   document.getElementById("tableform").addEventListener("submit", function (e) {
