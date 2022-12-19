@@ -13,6 +13,17 @@ let orderproducts = new products(db);
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
 
+//remove orders
+function totalSum(){
+  const sum = bookings[0].orders[0].reduce((partialSum, a) => partialSum + a, 0);
+  console.log(sum)
+}
+//remove orders
+function removeOrder(e, x){
+
+  bookings[0].orders.splice(x, 1)
+      bookings[0].showOrders(order);
+}
 
 //to switch items in menu
 function createprodcuts(e){
