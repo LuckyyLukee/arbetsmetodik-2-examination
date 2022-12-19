@@ -162,6 +162,7 @@ body {
     visibility: hidden;
 } */
 
+
 .orders {
     background-image: url(/img/wood-g3bdc269eb_1920.jpg);
     color: white;
@@ -175,4 +176,5 @@ body {
     z-index: 20;
     text-align: right;
     position: fixed; 
+    visibility: hidden;
 }

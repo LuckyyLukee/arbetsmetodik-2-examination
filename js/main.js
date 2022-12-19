@@ -4,6 +4,7 @@ const  btn = document.getElementsByTagName('button');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders')
+const showOrders = document.querySelector('.ordersection');
 const bookings = [];
 let textLanguage = "english";
 //create object orderproducts
@@ -50,11 +51,17 @@ function getData(form) {
       }
   }
 
+  function styleTableBooking() { // function for visibility
+    let bookVisibility = document.querySelector(".tableform");
+    let featuresVisibility = document.querySelector('.')
+    bookVisibility.style.visibility = "hidden";
+  }
 
   //eventlistener for the tablebooking
   document.getElementById("tableform").addEventListener("submit", function (e) {
     e.preventDefault();
     getData(e.target);
+    styleTableBooking(); // Function for visibility
   })
 
 

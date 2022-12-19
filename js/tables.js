@@ -10,7 +10,7 @@ class table{
     }
     
     getOrders(products,price){
-        const product = [products + " - " + price + ":-"]
+        const product = [products + " -" + price + ":-"]
         this.orders.push(product);
         console.log(this.orders)
     } 
