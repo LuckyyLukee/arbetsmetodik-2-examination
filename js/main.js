@@ -5,6 +5,7 @@ const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders')
 const bookings = [];
+let textLanguage = "english";
 //create object orderproducts
 let orderproducts = new products(db);
 //takes 2 parameters 1 for db one for drinks,bbq,exc
@@ -18,10 +19,10 @@ orderproducts.eventHandlerMenu(listmenu);
 function createprodcuts(e){
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.textContent == 'Food'){
-    orderproducts.createCards(8,cardContainer);
+    orderproducts.createCards(0,cardContainer);
 }
 if(e.target.textContent == 'Snacks'){
-  orderproducts.createCards(2,cardContainer);
+  orderproducts.createCards(5,cardContainer);
 }
 if(e.target.textContent == 'Drinks'){
   orderproducts.createCards(6,cardContainer);
@@ -55,8 +56,6 @@ function getData(form) {
     e.preventDefault();
     getData(e.target);
   })
-
-
 
 
   
