@@ -1,16 +1,9 @@
 const input = document.querySelector(".search-bar");
-const searchResults = document.querySelector(".search-results")
 const list = document.querySelector(".list");
+let searchResults = [];
 // const filter = input.value.toLowerCase();
 
 
-function searchFor() {
-    for (i = 0; i < db.bbqs.length; i++) {
-        if (input == db.bbqs.name || db.bbqs.id){
-            setList();
-        }
-    }
-}
 
 function setList(results) {
     for (let item of results) {
