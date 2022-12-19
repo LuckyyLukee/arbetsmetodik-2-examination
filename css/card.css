@@ -1,6 +1,11 @@
 @import "style.css";
 
 .featured {
+    margin: 3em 1em;
+}
+
+.featured h1 {
+    text-transform: uppercase;
     margin: 1em;
 }
 
@@ -38,6 +43,7 @@
 .featured-grid{
     display: grid;
     grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
     grid-gap: 2em;
     margin: 1em 0;
 }
@@ -46,6 +52,10 @@
     background-color: #fff;
     text-align: center;
     position: relative;
+    min-height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     min-height: 300px;
     border-radius: 15px;
     overflow: hidden;
@@ -59,9 +69,11 @@
 }
 
 .card h2 {
+    font-size: 1.5rem;
     font-size: 4rem;
     text-align: center;
     font-family: pirate;
+
 }
 
 .card p {
@@ -69,6 +81,9 @@
 }
 
 .card-price {
+    color: var(--darkblue-color);
+    font-weight: bold;
+    font-size: 20px;
     font-weight: bold;
     font-size: 1.5em;
     position: absolute; 
@@ -77,6 +92,11 @@
 
 .card img {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.add-to-cart {
     height: 300px;
     object-fit: cover;
     border-bottom-left-radius: 0;
@@ -96,6 +116,10 @@
     outline: 0;
     padding: 1em;
     width: 100%;
+    font-size: 1.3rem;
+    background-color: var(--darkblue-color);
+    color: #fff;
+}
     height: 4em;
     font-size: 1.7rem;
     background-image: url(/img/wood-g3bdc269eb_1920.jpg);
@@ -104,5 +128,6 @@
     text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     filter:brightness(1.5)
 }   
+
 
 /* Vertival cards */

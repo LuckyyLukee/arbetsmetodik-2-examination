@@ -6,10 +6,13 @@
     font-family: pirate;
     src: url(fonts/TreasureMapDeadhand-yLA3.ttf);
 }
+
+
 @font-face {
     font-family: yarr;
     src: url(fonts/CARIC___.TTF);
 }
+
 
 * {
     margin: 0;
@@ -21,6 +24,7 @@
 
 :root{
     --main-bg-color:#364d7f;
+    --board-bg-color:#B1F4FC;
     --board-bg-color:#86c5e9;
     --text-color:#F4D499;
     --darkblue-color:#395461;
@@ -51,6 +55,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    height: 16em;  
     height: 15em;  
     position: relative; 
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -62,6 +67,23 @@ body {
 }
 
 .main-header h1 {
+    padding: 1em 1em 0em 1em; 
+    font-family: pirate;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.cart-icon {
+    width: 80px; 
+    position: absolute; 
+    top: 18%;
+    right: 7%; 
+    background-color: white;
+    padding: 0.4em;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
     padding: 0.8em 1em 0em 1em; 
     font-family: pirate;
     font-size: 3.4em;
@@ -121,6 +143,17 @@ body {
 .list-item:hover {
     background-color: rgba(56, 72, 135, 0.08);
 }
+
+.search-bar {
+    width: 70%;
+    font-size: 1.5em;
+    margin: 1em auto; 
+    margin-top: 0; 
+    padding: 0.2em; 
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border: none; 
+    
 .search-bar-div {
     display: flex;
     background-color: white;
@@ -152,6 +185,10 @@ body {
 .footer{
     bottom: 0;
     width: 100%;
+    height: 60px;   /* Height of the footer */
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
+    position: sticky;
+    bottom: 0;
     height: 2em;   /* Height of the footer */
     background-image: url(/img/wood-g3bdc269eb_1920.jpg);
     padding: 0.5em; 
@@ -160,4 +197,5 @@ body {
 
 .tableform {
     visibility: hidden;
+
 }
