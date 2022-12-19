@@ -30,7 +30,6 @@ class products{
         card.setAttribute("id", id)
 
 
-            console.log(element)
 
             card.innerHTML = `
     
@@ -45,24 +44,16 @@ class products{
             <p>
             ${dsc}
             </p>
-            <span class="card-price">${price} Sek</span>
+            <span class="card-price">${price} </span>Sek
         </div>
         <button class="add-to-cart">Add to cart</button>
         `;
         cardContainer.appendChild(card)
           });
 
-        // Eventlistener on add-to-cart buttons
-        const addBtn = document.querySelectorAll(".add-to-cart");
-        addBtn.forEach(button => {
-            button.addEventListener("click", function (e) {
-                let product = e.target.parentElement
-                shoppingCart.push(product)
-                const badge = document.querySelector(".badge");
-                badge.innerHTML = shoppingCart.length;
-            })
-        })
 
     }
+
+    
 }
 

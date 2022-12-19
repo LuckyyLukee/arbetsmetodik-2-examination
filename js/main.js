@@ -1,6 +1,4 @@
 const cardContainer = document.querySelector('.featured-grid');
- // ShoppingCart
-let shoppingCart = []
 
 const bookings = [];
 // get data from the form
@@ -15,7 +13,6 @@ function getData(form) {
         console.log("finns inte")
         bookings.push(booking);
       }
-      console.log(bookings)
   }
   //create object products
   let product = new products(db);
@@ -29,22 +26,7 @@ function getData(form) {
   })
 
 
-const buttons = document.querySelectorAll(".list-item");
-
-// Eventlisteners for list-items
-buttons.forEach(button => {
-  button.addEventListener("click", function (e) {
-    let id = e.target.id;
-
-    // remove previus cards from DOM
-    let cards = document.querySelectorAll(".card");
-        cards.forEach(card=> {
-            card.remove()
-        });
-
-    product.createCards(db,id,cardContainer);
-  })
+// Open cart and show products in cart
+document.querySelector(".cart-icon").addEventListener('click', function() {
+  document.getElementById('cart').classList.toggle('hide');
 });
-
-
-
