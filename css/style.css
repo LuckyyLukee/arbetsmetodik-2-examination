@@ -150,7 +150,6 @@ body {
 }
 
 .footer{
-    bottom: 0;
     width: 100%;
     height: 2em;   /* Height of the footer */
     background-image: url(/img/wood-g3bdc269eb_1920.jpg);
@@ -194,7 +193,8 @@ body {
     text-align: right;
     position: fixed; 
     visibility: hidden;
-    animation: slide-in 1500ms ease; 
+    animation: slide-in 5000ms ease-in-out; 
+    animation-timing-function:cubic-bezier(5, 0, 0, 1);
     font-size: 1.1em;
 }
 
