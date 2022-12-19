@@ -177,4 +177,15 @@ body {
     text-align: right;
     position: fixed; 
     visibility: hidden;
+    animation: slide-in 1500ms ease; 
+    font-size: 1.1em;
+}
+
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+    } to {
+        transform: translateY(0);
+    }
 }

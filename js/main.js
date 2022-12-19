@@ -53,7 +53,7 @@ function getData(form) {
 
   function styleTableBooking() { // function for visibility
     let bookVisibility = document.querySelector(".tableform");
-    let featuresVisibility = document.querySelector('.featured h1')
+    let featuresVisibility = document.querySelector('.featured  > h1')
     bookVisibility.style.visibility = "hidden";
     featuresVisibility.style.visibility = "visible";
   }
