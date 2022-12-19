@@ -51,7 +51,6 @@ class products{
             getProduct(e.target);
             let orders = document.querySelector(".ordersection");
             orders.style.visibility = "visible";
-            
             })
            }
         }
