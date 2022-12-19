@@ -5,6 +5,7 @@ const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders')
 const bookings = [];
+let textLanguage = "english";
 //create object orderproducts
 let orderproducts = new products(db);
 //takes 2 parameters 1 for db one for drinks,bbq,exc
@@ -13,25 +14,18 @@ let orderproducts = new products(db);
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
 
-//remove orders
-//remove orders
-function removeOrder(e, x){
-
-  bookings[0].orders.splice(x, 1)
-      bookings[0].showOrders(order);
-}
 
 //to switch items in menu
 function createprodcuts(e){
   document.querySelectorAll(".card").forEach(el => el.remove());
-if(e.target.textContent == 'Drinks'){
-    orderproducts.createCards(6,cardContainer);
+  if(e.target.textContent == 'Food'){
+    orderproducts.createCards(0,cardContainer);
 }
-if(e.target.textContent == 'Food'){
-  orderproducts.createCards(0,cardContainer);
-}
-if(e.target.textContent == 'Sweets'){
+if(e.target.textContent == 'Snacks'){
   orderproducts.createCards(5,cardContainer);
+}
+if(e.target.textContent == 'Drinks'){
+  orderproducts.createCards(6,cardContainer);
 }
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
