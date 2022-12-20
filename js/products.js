@@ -45,20 +45,4 @@ class products{
         cardContainer.appendChild(card)
           });
     }
-    eventHandlerBtns(btns){
-        for (let i = 0; i < btn.length; i++) {
-            btn[i].addEventListener("click", function (e) {
-            getProduct(e.target);
-            })
-           }
-        }
-        eventHandlerMenu(listmenu){
-            for (let i = 0; i < listmenu.length; i++) {
-                listmenu[i].addEventListener("click", function (e) {
-                createprodcuts(e);
-              
-                })
-               }
-            }
-
 }
