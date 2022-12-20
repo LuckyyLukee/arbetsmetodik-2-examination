@@ -13,7 +13,7 @@ class table{
         const product = [products, price]
         this.orders.push(product);
         console.log(this.orders)
-    } 
+    }
     showOrders(maincontainer){
             document.querySelectorAll(".info").forEach(el => el.remove());
             for(let i = 0; i < this.orders.length; i++){

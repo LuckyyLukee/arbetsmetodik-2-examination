@@ -71,6 +71,7 @@ function styleCart() {
     e.preventDefault();
     getData(e.target);
     styleCart();
+    orderproducts.createCards(6,cardContainer);
   })
 
 const button = document.querySelector(".swedish");
