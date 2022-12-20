@@ -19,9 +19,9 @@
       </div>
       <nav class="header-nav">
         <ul class="nav-list">
-          <li class="list-item" class="drinks">Drinks</li>
-          <li class="list-item" class="food">Food</li>
-          <li class="list-item" class="sweets">Sweets</li>
+          <li class="list-item" id="Drinks">Drinks</li>
+          <li class="list-item" id="Food">Food</li>
+          <li class="list-item" id="Snacks">Sweets</li>
         </ul>
       </nav>
       <div class="search-bar-div"><img class="search-bar-icon" src="/arbetsmetodik-2-examination/img/treasure-map.png" alt="searchbar icon" width = "50px" height="50px"><input type="text" class="search-bar" placeholder="Search" /></div>
@@ -29,16 +29,16 @@
       <div class="landing-page">
         <div class="language-container">
           <div class="language">
-            <input class="swedish" name="swedish" type="button" onclick="translate()"/>
+            <input class="swedish" name="swedish" type="button"/>
             <input class="english" name="english" type="button"/>
           </div>
         </div>
         <header class="landing-header">The Kraken Inn</header>
         <div class="tableform-container"></div>
           <form id="tableform" name="tableform" action="">
-            <label>Name*</label>
+            <label id="name-lbl">Name*</label>
             <input id="name" name="name" placeholder="Put Your Name" required/>
-            <label for="deck">Choose your table*
+            <label id="table-lbl" for="deck">Choose your table*
             </label>
             <select name="selectTable" id="SelectTable">
               <option value="1">1</option>
@@ -56,7 +56,7 @@
         <div class="orders">
         </div>
         <div class="styled-line"></div>
-        <p>Total</p>
+        <p id="total-lbl">Total</p>
         <p class="sum-total"></p>
         <button class="checkout-btn">Check Out</button>
       </section>
@@ -64,13 +64,13 @@
         <div class="filter">
           
         </div>
-        <h1>Todays features</h1>
+        <h1 id="features-lbl">Todays features</h1>
         <div class="featured-grid">
       </section>
       
     </div>
     <footer class="footer">
-      <p>Images from Pixabay</p>
+      <p id="footer-lbl">Images from Pixabay</p>
     </footer>
   </body>
 
