@@ -67,8 +67,15 @@ function styleCart() {
 
 
   //eventlistener for the tablebooking
-  document.getElementById("tableform").addEventListener("submit", function (e) {
-    e.preventDefault();
-    getData(e.target);
-    styleCart();
-  })
+document.getElementById("tableform").addEventListener("submit", function (e) {
+  e.preventDefault();
+  getData(e.target);
+  styleCart();
+})
+
+function translate() {
+  console.log("hello")
+  document.querySelector(".drinks").innerHTML = "Dryck"
+  document.querySelector(".foods").innerHTML = "Mat"
+  document.querySelector(".sweets").innerHTML = "Fika"
+}
