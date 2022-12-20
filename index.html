@@ -13,40 +13,52 @@
       <div>
         <img
           class="cart-icon"
-          src="/img/bag.png"
+          src="/arbetsmetodik-2-examination/img/bag.png"
           alt="Treasure chest shopping cart icon" />
       </div>
       <nav class="header-nav">
         <ul class="nav-list">
           <li class="list-item">Drinks</li>
           <li class="list-item">Food</li>
-          <li class="list-item">Snacks</li>
+          <li class="list-item">Sweets</li>
         </ul>
       </nav>
-      <input type="text" class="search-bar" placeholder="Search" />
+      <div class="search-bar-div"><img class="search-bar-icon" src="/arbetsmetodik-2-examination/img/treasure-map.png" alt="searchbar icon" width = "50px" height="50px"><input type="text" class="search-bar" placeholder="Search" /></div>
     </header>
-      <div class="tableform">
-        <form id="tableform" name="tableform" action="">
-          <label>Name: </label>
-          <input id="name" name="name" value="name" />
-          <label for="deck">Choose your table</label>
-          <select name="selectTable" id="SelectTable">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-          <input class="button" type="submit" value="book" />
-          
-        </form>
+      <div class="landing-page">
+        <div class="language-container">
+          <div class="language">
+            <input class="swedish" name="swedish" type="button" onclick="chooseLanguage('sv')"/>
+            <input class="english" name="english" type="button" onclick="chooseLanguage('en')"/>
+          </div>
+        </div>
+
+        <header class="landing-header">The Kraken Inn</header>
+        <div class="tableform-container"></div>
+          <form id="tableform" name="tableform" action="">
+            <label>Name*</label>
+            <input id="name" name="name" placeholder="Put Your Name" required/>
+            <label for="deck">Choose your table*
+            </label>
+            <select name="selectTable" id="SelectTable">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <input class="button" type="submit" value="Book" />
+          </form>
       </div>
       <section class="ordersection"> 
-          <div class="orders">
-            
-
-          </div>
+        <p class="in-cart">Orders</p>
+        <div class="orders">
+        </div>
+        <div class="styled-line"></div>
+        <p>Total</p>
+        <p class="sum-total"></p>
+        <button class="checkout-btn">Check Out</button>
       </section>
       <section class="featured">
         <div class="filter">
@@ -55,14 +67,16 @@
         <h1>Todays features</h1>
         <div class="featured-grid">
       </section>
-      <footer class="footer">
-        <p>Future footer</p>
-      </footer>
+      
     </div>
+    <footer class="footer">
+      <p>Images from Pixabay</p>
+    </footer>
   </body>
 
   <script src="./js/db.js"></script>
   <script src="./js/products.js"></script>
   <script src="./js/tables.js"></script>
   <script src="./js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </html>
