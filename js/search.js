@@ -37,7 +37,7 @@ input.addEventListener("input", (e) => {
         }))
     } else {
         clearList();
-        searchResults.style.visibility = 'hidden'
+        searchResults.style.visibility;
     }
 }
 )
