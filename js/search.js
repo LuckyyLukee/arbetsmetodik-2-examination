@@ -23,17 +23,17 @@ input.addEventListener("input", (e) => {
     if (search && search.trim().length > 0){
         search = search.toLowerCase();
         setList(db.drinks.filter(item => {
-            return item.name.includes(search)|| item.id.includes(search)
+            return item.name.startsWith(search)|| item.id.includes(search)
         }))
     } if (search && search.trim().length > 0){
         search = search.toLowerCase();
         setList(db.bbqs.filter(item => {
-            return item.name.includes(search) || item.id.includes(search)
+            return item.name.startsWith(search) || item.id.includes(search)
         }))
     } if (search && search.trim().length > 0){
         search = search.toLowerCase();
         setList(db.desserts.filter(item => {
-            return item.name.includes(search) || item.id.includes(search)
+            return item.name.startsWith(search) || item.id.includes(search)
         }))
     } else {
         clearList();
@@ -58,4 +58,38 @@ function noResultsFound() {
     list.appendChild(error);
 }
 
+// const food = document.getElementsByClassName('card')
+// const searchFoods = [];
+
+// input.addEventListener('input', (e) => {
+//     let input = e.target.value; 
+//     console.log(input)
+//     return input;
+// })
+
+// input.addEventListener('input', search);
+
+// function search(){
+// for (var i = 0; i < food.length; i++) {
+// searchFoods.push({name: food[i].id.toLocaleLowerCase()});
+// }
+// //your input from search bar
+
+// //   let query = input; 
+//   //create a search from querry
+//   let search = searchFoods.filter(option => option.name.startsWith(input.toLowerCase()));
+
+  
+//   for(var a = 0; a < search.length; a++){
+
+//     for (var i = 0; i < food.length; i++){  
+//           if(search[a].name === food[i].id.toLocaleLowerCase()){
+//           food[i].style.visibility='hidden';
+//           console.log(search[a].name) 
+         
+//           }
+//       }
+//   }
+  
+// }
 

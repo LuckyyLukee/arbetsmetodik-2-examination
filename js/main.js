@@ -36,6 +36,7 @@ if(e.target.textContent == 'Drinks'){
 }
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
+// search();
 }
 //Get the orders, do methods in table class
 function getProduct(product){
