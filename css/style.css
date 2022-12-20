@@ -245,6 +245,11 @@ body {
     text-align: center;
 }
 
+.show {
+    position: absolute; 
+    background-color: #364d7f;
+}
+
 
 @keyframes slide-in {
     from {
