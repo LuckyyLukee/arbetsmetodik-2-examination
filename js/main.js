@@ -74,19 +74,5 @@ function styleCart() {
   })
 
 function chooseLanguage(language) {
-  const nav = document.querySelector('.nav-list');
-  const languagePage = document.querySelector('.language-container');
-  languagePage.style.visibility = "hidden";
-  languagePage.style.zIndex = "29";
-  if (language == 'sv') {
-    for (li in nav) {
-      if (li.innerHTML.indexOf('Drinks') !== -1) {
-        li.innerHTML = "Drycker"
-      } else if (li.innerHTML.indexOf('Food') !== -1) {
-        li.innerHTML = "Mat"
-      } else if (li.innerHTML.indexOf('Sweets') !== -1) {
-        li.innerHTML = "Söt"
-      }
-    }
-  }
+  
 }
