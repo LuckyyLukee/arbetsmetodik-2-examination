@@ -46,7 +46,7 @@ body {
 
 .main-header {
     color: var(--board-bg-color);
-    background-image: url(/arbetsmetodik-2-examination/img/wood-g3bdc269eb_1920.jpg);
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,7 +152,7 @@ body {
 .footer{
     width: 100%;
     height: 2em;   /* Height of the footer */
-    background-image: url(/arbetsmetodik-2-examination/img/wood-g3bdc269eb_1920.jpg);
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
     padding: 0.5em; 
     color: white;
 }
@@ -176,7 +176,7 @@ body {
 .ordersection {
     display: flex;
     position: relative; 
-    background-image: url(/arbetsmetodik-2-examination/img/wood-g3bdc269eb_1920.jpg);
+    background-image: url(/img/wood-g3bdc269eb_1920.jpg);
     color: white;
     display: inline-block;
     padding: 1em; 
@@ -242,7 +242,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: #010307; /* Black background with opacity */
-    background-image: url(/arbetsmetodik-2-examination/img/water-gd7b96a9c6_1920.jpg);
+    background-image: url(/img/water-gd7b96a9c6_1920.jpg);
     background-size: cover;;
     z-index: 30;
 
@@ -323,14 +323,14 @@ body {
 }
 
 .swedish {
-    background-image: url(/arbetsmetodik-2-examination/img/swedish.png);
+    background-image: url(/img/swedish.png);
     background-size: cover;
     border-radius: 10px;
     border-style: none;
 }
 
 .english {
-    background-image: url(/arbetsmetodik-2-examination/img/english.png);
+    background-image: url(/img/english.png);
     background-size: cover;
     border-radius: 10px;
     border-style: none;
