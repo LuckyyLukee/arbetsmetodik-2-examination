@@ -19,7 +19,7 @@ class table{
                 let info = this.createDom();
                 let x = [i];
                 info[1].addEventListener("click", function (e) {
-                        removeOrder(e, x);     
+                        removeOrder(e, x);   
                 })
                 info[0].innerHTML = this.orders[i]
                 maincontainer.append(info[0]);

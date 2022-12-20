@@ -34,11 +34,11 @@ class products{
         />
         <div class="card-text">
             <h2>${name}</h2>
-            <p>rating: ${rate}</p>
+            <p>Rating: ${rate}</p>
             <p>
-            ${dsc}
+            ${dsc}.
             </p>
-            <span class="card-price">${price} Sek</span>
+            <span class="card-price">${price} sek</span>
         </div>
         <button class="add-to-cart">Add to cart</button>
         `;
