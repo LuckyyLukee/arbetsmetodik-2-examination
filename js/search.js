@@ -18,14 +18,26 @@ function setList(results) {
 
 input.addEventListener("input", (e) => {
     let search = e.target.value;
+    searchResults.style.visibility = 'visible';
 
     if (search && search.trim().length > 0){
         search = search.toLowerCase();
-        setList(db.breads.filter(item => {
-            return item.name.includes(search)
+        setList(db.drinks.filter(item => {
+            return item.name.includes(search)|| item.id.includes(search)
+        }))
+    } if (search && search.trim().length > 0){
+        search = search.toLowerCase();
+        setList(db.bbqs.filter(item => {
+            return item.name.includes(search) || item.id.includes(search)
+        }))
+    } if (search && search.trim().length > 0){
+        search = search.toLowerCase();
+        setList(db.desserts.filter(item => {
+            return item.name.includes(search) || item.id.includes(search)
         }))
     } else {
         clearList();
+        searchResults.style.visibility = 'hidden'
     }
 }
 )
@@ -46,6 +58,4 @@ function noResultsFound() {
     list.appendChild(error);
 }
 
-function updateList() {
 
-}
