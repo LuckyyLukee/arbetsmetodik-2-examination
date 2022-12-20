@@ -72,10 +72,3 @@ function styleCart() {
     getData(e.target);
     styleCart();
   })
-
-function chooseLanguage(language) {
-  const nav = document.querySelector('.nav-list');
-  const languagePage = document.querySelector('.language-container');
-  languagePage.style.visibility = "hidden";
-  languagePage.style.zIndex = "29";
-}
