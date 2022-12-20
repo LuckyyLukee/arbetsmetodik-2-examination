@@ -10,12 +10,14 @@ const bookings = [];
 let orderproducts = new products(db);
 //takes 2 parameters 1 for db one for drinks,bbq,exc
 
+
 //Create eventhandlers for btns and menu for products
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
+//remove orders
+//remove orders
 
-//remove orders
-//remove orders
+
 function removeOrder(e, x){
 
   bookings[0].orders.splice(x, 1)
@@ -36,6 +38,7 @@ if(e.target.textContent == 'Drinks'){
 }
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
+search();
 }
 //Get the orders, do methods in table class
 function getProduct(product){

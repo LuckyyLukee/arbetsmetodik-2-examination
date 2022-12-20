@@ -24,6 +24,7 @@ class products{
         let card = document.createElement("div");
         card.classList.add("card")
         let {id, img, name, dsc, price, rate} = element;
+        card.setAttribute("data-product", id,)
         card.setAttribute("id", name,)
         card.setAttribute("price" , price)
             card.innerHTML = `
