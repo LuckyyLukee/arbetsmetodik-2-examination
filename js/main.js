@@ -6,7 +6,6 @@ const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
 const bookings = [];
-let textLanguage = "english";
 //create object orderproducts
 let orderproducts = new products(db);
 //takes 2 parameters 1 for db one for drinks,bbq,exc
@@ -37,6 +36,7 @@ if(e.target.id == 'Drinks'){
 }
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
+// search();
 }
 //Get the orders, do methods in table class
 function getProduct(product){
@@ -53,7 +53,7 @@ function getData(form) {
        console.log("finns redan")
        alert("booked");
       }else{
-        console.log("bord är ledig")
+        console.log("finns inte")
         bookings.push(booking);
       }
   }
@@ -62,7 +62,7 @@ function styleCart() {
   const bookVisibility = document.querySelector('.landing-page');
   const featuresVisibility = document.querySelector('.featured > h1')
   bookVisibility.style.visibility = "hidden";
-  featuresVisibility.style.Visibility = "visible";
+  featuresVisibility.style.visibility = "visible";
 }
 
 
@@ -71,11 +71,10 @@ function styleCart() {
     e.preventDefault();
     getData(e.target);
     styleCart();
-    orderproducts.createCards(6,cardContainer);
   })
 
-const button = document.querySelector(".swedish");
-button.addEventListener("click", function() {
+const swedishButton = document.querySelector(".swedish");
+swedishButton.addEventListener("click", function() {
   document.getElementById('Drinks').innerHTML = "Dryck";
   document.getElementById('Food').innerHTML = "Mat";
   document.getElementById('Snacks').innerHTML = "Fika";
@@ -89,3 +88,11 @@ button.addEventListener("click", function() {
   languagePage.style.visibility = "hidden";
   languagePage.style.zIndex = "29";
 });
+
+const englishbutton = document.querySelector(".english")
+englishbutton.addEventListener("click", function() {
+  const languagePage = document.querySelector('.language-container');
+  languagePage.style.visibility = "hidden";
+  languagePage.style.zIndex = "29";
+});
+
