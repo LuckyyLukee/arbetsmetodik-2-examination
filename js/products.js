@@ -19,20 +19,14 @@ class products{
             "our-foods"
         ]
     }
-    createCards(db,number,maincontainer){
-        db[this.filter[number]].forEach(element => {
-
+    createCards(number,maincontainer){
+        this.db[this.filter[number]].forEach(element => {
         let card = document.createElement("div");
         card.classList.add("card")
-        
         let {id, img, name, dsc, price, rate} = element;
-
-        card.setAttribute("id", id)
-
-
-
+        card.setAttribute("id", name,)
+        card.setAttribute("price" , price)
             card.innerHTML = `
-    
         <img
             class="card-img"
             src=${img}
@@ -44,16 +38,27 @@ class products{
             <p>
             ${dsc}
             </p>
-            <span class="card-price">${price} </span>Sek
+            <span class="card-price">${price} Sek</span>
         </div>
         <button class="add-to-cart">Add to cart</button>
         `;
         cardContainer.appendChild(card)
           });
-
-
     }
+    eventHandlerBtns(btns){
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", function (e) {
+            getProduct(e.target);
+            })
+           }
+        }
+        eventHandlerMenu(listmenu){
+            for (let i = 0; i < listmenu.length; i++) {
+                listmenu[i].addEventListener("click", function (e) {
+                createprodcuts(e);
+              
+                })
+               }
+            }
 
-    
 }
-
