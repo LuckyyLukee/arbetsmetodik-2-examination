@@ -17,9 +17,8 @@ class table{
             document.querySelectorAll(".info").forEach(el => el.remove());
             for(let i = 0; i < this.orders.length; i++){
                 let info = this.createDom();
-                let x = [i];
                 info[1].addEventListener("click", function (e) {
-                        removeOrder(e, x);     
+                        removeOrder(e, i);     
                 })
                 info[0].innerHTML = this.orders[i]
                 maincontainer.append(info[0]);
@@ -41,8 +40,8 @@ class table{
         for (const item of this.orders) {
             sum = sum += item[1];
           }
+          console.log(sum); 
           sumTotal.innerText = sum + " :-";
-          return sum;
     }
   
 }

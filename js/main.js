@@ -5,6 +5,7 @@ const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
+const orders = document.querySelector('.ordersection');
 const bookings = [];
 //create object orderproducts
 let orderproducts = new products(db);
@@ -25,6 +26,11 @@ function calcMoms(sum,moms){
 function removeOrder(e, x){
   bookings[0].orders.splice(x, 1)
       bookings[0].showOrders(order);
+
+  if (bookings[0].orders.length == 0) {
+    sumTotal.innerText = '';
+    orders.style.visibility = 'hidden';
+  }
 }
 
 //to switch items in menu
