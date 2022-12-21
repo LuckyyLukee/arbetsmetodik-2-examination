@@ -8,10 +8,8 @@ const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
 const orders = document.querySelector('.ordersection');
 const bookName = document.querySelector('.booking-name');
-const bookTable = document.querySelector('.booking-table');
-const carticon = document.querySelector('.cart-icons');
+const bookTable = document.querySelector('.booking-table')
 const bookings = [];
-
 
 //create object orderproducts
 let orderproducts = new products(db);
@@ -21,15 +19,8 @@ let orderproducts = new products(db);
 //Create eventhandlers for btns and menu for products
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
-orderproducts.eventHandlerCheckout(checkoutbtn);
 //remove orders
 //remove orders
-
-function calcMoms(sum,moms){
-  let sumWithMoms = sum * moms;
-  return sumWithMoms
-}
-
 
 function calcMoms(sum,moms){
   let sumWithMoms = sum * moms;
@@ -48,6 +39,7 @@ function removeOrder(e, x){
 
 //to switch items in menu
 function createprodcuts(e){
+  
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.id == 'Food'){
     orderproducts.createCards(0,cardContainer);
