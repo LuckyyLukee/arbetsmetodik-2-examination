@@ -108,7 +108,7 @@ document.getElementById("tableform").addEventListener("submit", function (e) {
 const swedishButton = document.querySelector(".swedish");
 swedishButton.addEventListener("click", function() {
   document.getElementById('Drinks').innerHTML = "Dryck";
-  document.getElementById('Food').innerHTML = "Mat";
+  document.getElementById('Foods').innerHTML = "Mat";
   document.getElementById('Snacks').innerHTML = "Fika";
   document.getElementById('name-lbl').innerHTML = "Namn*";
   document.getElementById('table-lbl').innerHTML = "Välj bord*";
