@@ -4,7 +4,6 @@ const input = document.querySelector(".search-bar");
 let query;
 
 
-
 input.addEventListener("keydown", (e) => {
     if (input.value != "") {
     query = input.value;

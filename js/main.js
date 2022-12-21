@@ -1,24 +1,42 @@
 //random variabels
 const cardContainer = document.querySelector('.featured-grid')
 const  btn = document.getElementsByClassName('add-to-cart');
+const  checkoutbtn = document.getElementsByClassName('checkout-btn');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
 const orders = document.querySelector('.ordersection');
+const bookName = document.querySelector('.booking-name');
+const bookTable = document.querySelector('.booking-table');
+const carticon = document.querySelector('.cart-icons');
 const bookings = [];
+
+
 //create object orderproducts
 let orderproducts = new products(db);
 //takes 2 parameters 1 for db one for drinks,bbq,exc
 
+
 //Create eventhandlers for btns and menu for products
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
+orderproducts.eventHandlerCheckout(checkoutbtn);
+//remove orders
+//remove orders
 
-//remove orders
-//remove orders
+function calcMoms(sum,moms){
+  let sumWithMoms = sum * moms;
+  return sumWithMoms
+}
+
+
+function calcMoms(sum,moms){
+  let sumWithMoms = sum * moms;
+  return sumWithMoms
+}
+
 function removeOrder(e, x){
-
   bookings[0].orders.splice(x, 1)
       bookings[0].showOrders(order);
 
@@ -68,6 +86,11 @@ function styleCart() {
   const featuresVisibility = document.querySelector('.featured > h1')
   bookVisibility.style.visibility = "hidden";
   featuresVisibility.style.visibility = "visible";
+  bookName.append(bookings[0].showName())
+  console.log(bookings[0].showName());
+  bookTable.append(bookings[0].showTable())
+  console.log(bookings[0].showTable());
+
 }
 
 
@@ -78,11 +101,14 @@ document.getElementById("tableform").addEventListener("submit", function (e) {
   styleCart();
 })
 
+
+
+
+
 const swedishButton = document.querySelector(".swedish");
 swedishButton.addEventListener("click", function() {
-
   cardContainer.classList.add("swe");
-
+  
   document.getElementById('Drinks').innerHTML = "Dryck";
   document.getElementById('Food').innerHTML = "Mat";
   document.getElementById('Snacks').innerHTML = "Fika";
@@ -95,6 +121,9 @@ swedishButton.addEventListener("click", function() {
   const languagePage = document.querySelector('.language-container');
   languagePage.style.visibility = "hidden";
   languagePage.style.zIndex = "29";
+
+  input.placeholder = "sök"
+
 });
 
 const englishbutton = document.querySelector(".english")
@@ -103,3 +132,5 @@ englishbutton.addEventListener("click", function() {
   languagePage.style.visibility = "hidden";
   languagePage.style.zIndex = "29";
 });
+
+

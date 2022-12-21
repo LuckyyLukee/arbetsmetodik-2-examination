@@ -18,44 +18,46 @@ class products{
             "steaks",
             "our-foods"
         ]
+        this.total;
     }
     createCards(number,maincontainer){
+
         let btnName;
         if (document.querySelector(".swe")) {
-            btnName = "Beställ"
+            btnName = "Lägg till"
         } else {
-            btnName = "Order"
+            btnName = "Add"
         }
 
         let selectedTwelwe = this.db[this.filter[number]].slice(0, 12)
-
         selectedTwelwe.forEach(element => {
         let card = document.createElement("div");
         card.classList.add("card")
         let {id, img, name, dsc, price, rate} = element;
+        card.setAttribute("data-product", id,)
         card.setAttribute("id", name,)
         card.setAttribute("price" , price)
             card.innerHTML = `
         <img
             class="card-img"
             src=${img}
-            alt=${name}
+            alt=""
         />
         <div class="card-text">
             <h2>${name}</h2>
-            <p>rating: ${rate}</p>
+            <p>Rating: ${rate}</p>
             <p>
-            ${dsc}
+            ${dsc}.
             </p>
-            <span class="card-price">${price} Sek</span>
+            <span class="card-price">${price} sek</span>
         </div>
-        <button class="add-to-cart">${btnName}</button>
+        <button class="add-to-cart">${btnName} </button>
         `;
         cardContainer.appendChild(card)
           });
     }
     eventHandlerBtns(btns){
-        for (let i = 0; i < btns.length; i++) {
+        for (let i = 0; i < btn.length; i++) {
             btn[i].addEventListener("click", function (e) {
             getProduct(e.target);
             // let orders = document.querySelector(".ordersection");
@@ -71,5 +73,19 @@ class products{
                 })
                }
             }
+            eventHandlerCheckout(checkout){
+                var sum  = 0;
+                for (let i = 0; i < checkout.length; i++) {
+                    checkout[i].addEventListener("click", function (e) {
+                    document.querySelectorAll(".p-total").forEach(el => el.remove());
+                    sum = sum += bookings[0].sendOrder();
+                    let p = document.createElement("p");
+                    p.className="p-total";
+                    p.innerHTML = sum;
+                    carticon.appendChild(p);
+
+                    })
+                   }
+                }
 
 }

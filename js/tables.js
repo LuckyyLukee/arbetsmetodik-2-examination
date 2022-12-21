@@ -3,6 +3,7 @@ class table{
         this.name = name;
         this.tablenumber = tablenumber;
         this.orders = [];
+        this.sum;
     }
     getTable(){
         console.log(this.name, this.tablenumber)
@@ -26,13 +27,27 @@ class table{
                 this.totalSum();
             }
     }
+    showName(){
+        let info = this.createDom();
+        let name = info[2].innerhtml = this.name;
+        return name;
+    }
+    showTable(){
+        let info = this.createDom();
+        let table = info[3].innerhtml = this.tablenumber;
+        return table;
+    }
     createDom(){
         let btn = document.createElement("BUTTON");
         btn.className = 'btninfo'
         btn.innerHTML = "X";
         let info = document.createElement("div");
         info.className = "info"
-        return [info, btn];
+        let bookingName = document.createElement("div");
+        bookingName.className = "booking-name"
+        let bookingTable = document.createElement("div");
+        bookingTable.className = "booking-table"
+        return [info, btn, bookingName, bookingTable];
     }
 
     totalSum(){
@@ -40,7 +55,12 @@ class table{
         for (const item of this.orders) {
             sum = sum += item[1];
           }
-          console.log(sum); 
-          sumTotal.innerText = sum + " :-";
+          this.sum = calcMoms(sum,1.25);
+          sumTotal.innerText =  calcMoms(sum,1.25) + " :-";
+    }
+    sendOrder(){
+        this.orders.splice(0, this.orders.length)
+        orders.style.visibility = 'hidden';
+        return this.sum;
     }
 }

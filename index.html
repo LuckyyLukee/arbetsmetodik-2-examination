@@ -4,13 +4,14 @@
     <title>Webshop</title>
     <meta name="description" text="Webshop" />
     <meta name="keywords" text="bar" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/card.css" />
   </head>
   <body>
    <header class="main-header">
       <h1>The Kraken Inn</h1>
-      <div>
+      <div class="cart-icons">
         <img
           class="cart-icon"
           src="./img//risk-skull.png"
@@ -23,8 +24,7 @@
           <li class="list-item" id="Snacks">Snacks</li>
         </ul>
       </nav>
-      <div class="search-bar-div"><img class="search-bar-icon"src="./img/treasure-map.png" alt="searchbar icon" width = "50px" height="50px"><input type="text" class="search-bar"  /></div>
-      <div class="search-results"><ul class="list"></ul></div>
+      <div class="search-bar-div"><img class="search-bar-icon"src="/img/treasure-map.png" alt="searchbar icon" width = "50px" height="50px"><input type="text" class="search-bar" placeholder="Search" /></div>
     </header>
     <div class="landing-page">
       <div class="language-container">
@@ -52,12 +52,17 @@
       </form>
     </div>
       <section class="ordersection"> 
+        <div class="name-table"></div>
         <p class="in-cart">Orders</p>
         <div class="orders">
         </div>
         <div class="styled-line"></div>
         <p>Total</p>
         <p class="sum-total"></p>
+        <div class="name-table">
+          <p class="booking-name"></p>
+          <p class="booking-table"></p>
+        </div>
         <button class="checkout-btn">Check Out</button>
       </section>
       
@@ -75,9 +80,11 @@
     </footer>
   </body>
 
-  <script src="./js/db.js"></script>
-  <script src="./js/search.js"></script>
-  <script src="./js/products.js"></script>
-  <script src="./js/tables.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="/js/db.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/products.js"></script>
+  <script src="/js/tables.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/main.js"></script>
+  
   </html>
