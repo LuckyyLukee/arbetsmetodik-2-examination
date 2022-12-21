@@ -24,9 +24,9 @@ class products{
 
         let btnName;
         if (document.querySelector(".swe")) {
-            btnName = "Lägg till"
+            btnName = "Beställ"
         } else {
-            btnName = "Add"
+            btnName = "Order"
         }
 
         let selectedTwelwe = this.db[this.filter[number]].slice(0, 12)
