@@ -90,6 +90,7 @@ document.getElementById("tableform").addEventListener("submit", function (e) {
   e.preventDefault();
   getData(e.target);
   styleCart();
+  orderproducts.createCards(6,cardContainer);
 })
 
 
