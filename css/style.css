@@ -43,7 +43,7 @@ body {
     margin: 0 auto;
     position: relative;
 }
-
+/*|| Header and nav*/
 .main-header {
     color: var(--board-bg-color);
     background-image: url(/img/wood-g3bdc269eb_1920.jpg);
@@ -121,6 +121,8 @@ body {
 .list-item:hover {
     background-color: rgba(56, 72, 135, 0.08);
 }
+
+/*|| Searchbar*/
 .search-bar-div {
     display: flex;
     background-color: white;
@@ -149,23 +151,7 @@ body {
     margin: 0.5em; 
 }
 
-.search-results {
-    background-color: white;
-    width: 70%;
-    position: absolute; 
-    left: 15%;
-    top: 90.5%;
-    border-radius: 15px;
-    visibility: hidden;
-}
-
-.list {
-    list-style: none;
-    padding: 1em; 
-}
-.result-item {
-    margin-bottom: 0.5em;
-}
+/*|| footer*/
 
 .footer{
     width: 100%;
