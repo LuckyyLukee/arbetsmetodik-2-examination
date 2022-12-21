@@ -17,15 +17,19 @@ orderproducts.eventHandlerMenu(listmenu);
 //remove orders
 //remove orders
 
+function calcMoms(sum,moms){
+  let sumWithMoms = sum * moms;
+  return sumWithMoms
+}
 
 function removeOrder(e, x){
-
   bookings[0].orders.splice(x, 1)
       bookings[0].showOrders(order);
 }
 
 //to switch items in menu
 function createprodcuts(e){
+  
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.textContent == 'Food'){
     orderproducts.createCards(0,cardContainer);
@@ -38,7 +42,6 @@ if(e.target.textContent == 'Drinks'){
 }
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
-search();
 }
 //Get the orders, do methods in table class
 function getProduct(product){

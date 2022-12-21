@@ -42,5 +42,7 @@ class table{
             sum = sum += item[1];
           }
           sumTotal.innerText = sum + " :-";
+          return sum;
     }
+  
 }
