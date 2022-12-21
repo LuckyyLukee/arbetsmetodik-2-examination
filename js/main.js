@@ -105,7 +105,7 @@ swedishButton.addEventListener("click", function() {
   document.getElementById('table-lbl').innerHTML = "Välj bord*";
   document.getElementById('features-lbl').innerHTML = "Dagens Val";
   document.getElementById('name').placeholder = "Sätt in namn";
-  document.getElementsByClassName('search-bar').placeholder = "Sök";
+  input.placeholder = "Sök";
   document.getElementsByClassName('in-cart').innerHTML = "Ordrar";
   document.getElementsByClassName('checkout-btn').innerHTML = "Till Kassan";
   document.getElementsByClassName('footer-lbl').innerHTML = "Bilder från Pixabay";
