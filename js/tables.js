@@ -29,7 +29,7 @@ class table{
     createDom(){
         let btn = document.createElement("BUTTON");
         btn.className = 'btninfo'
-        btn.innerHTML = "REMOVE";
+        btn.innerHTML = "X";
         let info = document.createElement("div");
         info.className = "info"
         return [info, btn];
