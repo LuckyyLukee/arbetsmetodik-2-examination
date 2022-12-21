@@ -1,4 +1,3 @@
-
 class table{
     constructor(name, tablenumber){
         this.name = name;
@@ -20,12 +19,17 @@ class table{
                 let info = this.createDom();
                 let x = [i];
                 info[1].addEventListener("click", function (e) {
-                        removeOrder(e, x);     
-                })
+                        removeOrder(e, x);
+                        console.log("length", bookings[0].orders.length) 
+
+                    })
+                
                 info[0].innerHTML = this.orders[i]
                 maincontainer.append(info[0]);
                 info[0].append(info[1])
-                this.totalSum();
+                this.totalSum();    
+                
+                    
             }
     }
     createDom(){
@@ -44,5 +48,7 @@ class table{
           }
           console.log(sum); 
           sumTotal.innerText = sum + " :-";
+
+          
     }
 }
