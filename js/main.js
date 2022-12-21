@@ -8,8 +8,10 @@ const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
 const orders = document.querySelector('.ordersection');
 const bookName = document.querySelector('.booking-name');
-const bookTable = document.querySelector('.booking-table')
+const bookTable = document.querySelector('.booking-table');
+const carticon = document.querySelector('.cart-icons');
 const bookings = [];
+
 
 //create object orderproducts
 let orderproducts = new products(db);
@@ -19,8 +21,15 @@ let orderproducts = new products(db);
 //Create eventhandlers for btns and menu for products
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
+orderproducts.eventHandlerCheckout(checkoutbtn);
 //remove orders
 //remove orders
+
+function calcMoms(sum,moms){
+  let sumWithMoms = sum * moms;
+  return sumWithMoms
+}
+
 
 function calcMoms(sum,moms){
   let sumWithMoms = sum * moms;
@@ -39,9 +48,8 @@ function removeOrder(e, x){
 
 //to switch items in menu
 function createprodcuts(e){
-  
   document.querySelectorAll(".card").forEach(el => el.remove());
-  if(e.target.id == 'Food'){
+  if(e.target.id == 'Foods'){
     orderproducts.createCards(0,cardContainer);
 }
 if(e.target.id == 'Snacks'){
@@ -91,6 +99,7 @@ document.getElementById("tableform").addEventListener("submit", function (e) {
   e.preventDefault();
   getData(e.target);
   styleCart();
+  // orderproducts.createCards(6,cardContainer);
 })
 
 
@@ -102,13 +111,15 @@ swedishButton.addEventListener("click", function() {
   cardContainer.classList.add("swe");
   
   document.getElementById('Drinks').innerHTML = "Dryck";
-  document.getElementById('Food').innerHTML = "Mat";
+  document.getElementById('Foods').innerHTML = "Mat";
   document.getElementById('Snacks').innerHTML = "Fika";
   document.getElementById('name-lbl').innerHTML = "Namn*";
   document.getElementById('table-lbl').innerHTML = "Välj bord*";
   document.getElementById('features-lbl').innerHTML = "Dagens Val";
+  document.getElementById('name').placeholder = "Sätt in namn";
+  input.placeholder = "Sök";
   document.getElementsByClassName('in-cart').innerHTML = "Ordrar";
-  document.getElementsByClassName('checkout-btn').innerHTML = "Till Kassan";
+  document.getElementsByClassName('checkout-btn').innerHTML = "Beställ";
   document.getElementsByClassName('footer-lbl').innerHTML = "Bilder från Pixabay";
   const languagePage = document.querySelector('.language-container');
   languagePage.style.visibility = "hidden";

@@ -1,14 +1,12 @@
-const food = document.getElementsByClassName('card')
+const food = document.getElementsByClassName('card');
 const searchFoods = [];
 const input = document.querySelector(".search-bar");
 let query;
-
-
+console.log(food)
 input.addEventListener("keydown", (e) => {
     if (input.value != "") {
     query = input.value;
     search(e);
-    console.log(food)
     }
 })
 
@@ -21,7 +19,6 @@ searchFoods.push({name: food[i].id.toLocaleLowerCase()});
     for (var i = 0; i < food.length; i++){  
           if(search[a].name != food[i].id.toLocaleLowerCase()){
         cardContainer.appendChild(food[i]);
-       
           }else{
            
           }
