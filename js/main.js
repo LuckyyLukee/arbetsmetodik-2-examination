@@ -5,6 +5,7 @@ const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
+const orders = document.querySelector('.ordersection');
 const bookings = [];
 //create object orderproducts
 let orderproducts = new products(db);
@@ -18,11 +19,11 @@ orderproducts.eventHandlerMenu(listmenu);
 //remove orders
 function removeOrder(e, x){
   bookings[0].orders.splice(x, 1)
-  bookings[0].showOrders(order);
-
+      bookings[0].showOrders(order);
 
   if (bookings[0].orders.length == 0) {
     sumTotal.innerText = '';
+    orders.style.visibility = 'hidden';
   }
 }
 
