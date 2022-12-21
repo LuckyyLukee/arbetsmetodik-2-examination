@@ -113,7 +113,7 @@ swedishButton.addEventListener("click", function() {
   document.getElementById('table-lbl').innerHTML = "Välj bord*";
   document.getElementById('features-lbl').innerHTML = "Dagens Val";
   document.getElementsByClassName('in-cart').innerHTML = "Ordrar";
-  document.getElementsByClassName('checkout-btn').innerHTML = "Till Kassan";
+  document.getElementsByClassName('checkout-btn').innerHTML = "Beställ";
   document.getElementsByClassName('footer-lbl').innerHTML = "Bilder från Pixabay";
   const languagePage = document.querySelector('.language-container');
   languagePage.style.visibility = "hidden";
