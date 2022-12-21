@@ -26,13 +26,27 @@ class table{
                 this.totalSum();
             }
     }
+    showName(){
+        let info = this.createDom();
+        let name = info[2].innerhtml = this.name;
+        return name;
+    }
+    showTable(){
+        let info = this.createDom();
+        let table = info[3].innerhtml = this.tablenumber;
+        return table;
+    }
     createDom(){
         let btn = document.createElement("BUTTON");
         btn.className = 'btninfo'
         btn.innerHTML = "X";
         let info = document.createElement("div");
         info.className = "info"
-        return [info, btn];
+        let bookingName = document.createElement("div");
+        bookingName.className = "booking-name"
+        let bookingTable = document.createElement("div");
+        bookingTable.className = "booking-table"
+        return [info, btn, bookingName, bookingTable];
     }
 
     totalSum(){
