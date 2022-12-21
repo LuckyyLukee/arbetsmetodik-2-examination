@@ -57,8 +57,6 @@ function getData(form) {
     if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
       console.log("finns redan")
       alert("booked");
-      const form = document.querySelector('.landing-page');
-      form.style.visibility = "hidden";
     } else{
         console.log("finns inte")
         bookings.push(booking);
@@ -66,10 +64,10 @@ function getData(form) {
   }
 
 function styleCart() {
-  const bookVisibility = document.querySelector('.tableform');
+  const bookVisibility = document.querySelector('.landing-page');
   const featuresVisibility = document.querySelector('.featured > h1')
-  bookVisibility.style.Visibility = "hidden";
-  featuresVisibility.style.Visibility = "visible";
+  bookVisibility.style.visibility = "hidden";
+  featuresVisibility.style.visibility = "visible";
 }
 
 
