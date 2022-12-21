@@ -5,10 +5,6 @@ class table {
         this.orders = [];
         this.sum;
     }
-    getTable() {
-        console.log(this.name, this.tablenumber)
-        return this.name + this.tablenumber;
-    }
     getOrders(products, price) {
         const product = [products, parseInt(price)]
         this.orders.push(product);
@@ -26,13 +22,11 @@ class table {
     }
     showName() {
         let info = this.createDom();
-        let name = info[2].innerhtml = this.name;
-        return name;
+        return info[2].innerhtml = this.name;
     }
     showTable() {
         let info = this.createDom();
-        let table = info[3].innerhtml = this.tablenumber;
-        return table;
+        return info[3].innerhtml = this.tablenumber;
     }
     createDom() {
         let btn = document.createElement("BUTTON");
