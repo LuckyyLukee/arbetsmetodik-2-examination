@@ -62,7 +62,8 @@ body {
 }
 
 .main-header h1 {
-    padding: 0.8em 1em 0em 1em; 
+    padding: 0.8em 1em 0em 1em;
+    padding: 0.8em 1em 0em 0.8em;
     font-family: pirate;
     font-size: 3.4em;
     color: rgb(255, 255, 255);
@@ -70,7 +71,7 @@ body {
 }
 
 .cart-icon {
-    width: 80px; 
+    width: 90px; 
     position: absolute; 
     top: 18%;
     right: 7%; 
@@ -198,7 +199,7 @@ body {
 
 .ordersection {
     display: flex;
-    position: relative; 
+    position: relative;
     background-image: url(../img/wood.jpg);
     color: white;
     display: inline-block;
