@@ -2,7 +2,7 @@ const food = document.getElementsByClassName('card');
 const searchFoods = [];
 const input = document.querySelector(".search-bar");
 let query;
-
+console.log(food)
 input.addEventListener("keydown", (e) => {
     if (input.value != "") {
     query = input.value;
