@@ -72,7 +72,7 @@ selectedTwelwe.forEach(element => {
                     document.querySelectorAll(".p-total").forEach(el => el.remove());
                     sum = sum += bookings[0].sendOrder();
                     let p = document.createElement("p");
-                    p.className="p-total";
+                    p.classList.add('p-total')
                     p.innerHTML = sum;
                     carticon.appendChild(p);
 
