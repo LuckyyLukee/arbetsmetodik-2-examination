@@ -4,8 +4,8 @@
     <title>Webshop</title>
     <meta name="description" text="Webshop" />
     <meta name="keywords" text="bar" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/card.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/card.css" />
   </head>
   <body>
    <header class="main-header">
@@ -13,35 +13,44 @@
       <div>
         <img
           class="cart-icon"
-          src="/img//risk-skull.png"
+          src="./img//risk-skull.png"
           alt="Treasure chest shopping cart icon" />
       </div>
       <nav class="header-nav">
         <ul class="nav-list">
-          <li class="list-item">Drinks</li>
-          <li class="list-item">Food</li>
-          <li class="list-item">Sweets</li>
+          <li class="list-item" id="Drinks">Drinks</li>
+          <li class="list-item" id="Food">Food</li>
+          <li class="list-item" id="Snacks">Snacks</li>
         </ul>
       </nav>
       <div class="search-bar-div"><img class="search-bar-icon"src="/img/treasure-map.png" alt="searchbar icon" width = "50px" height="50px"><input type="text" class="search-bar" placeholder="Search" /></div>
       <div class="search-results"><ul class="list"></ul></div>
     </header>
-      <div class="tableform">
-        <form id="tableform" name="tableform" action="">
-          <label>Name: </label>
-          <input id="name" name="name" placeholder="name" />
-          <label for="deck">Choose your table</label>
-          <select name="selectTable" id="SelectTable">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-          <input class="button" type="submit" value="book" />
-        </form>
+    <div class="landing-page">
+      <div class="language-container">
+        <div class="language">
+          <input class="swedish" name="swedish" type="button"/>
+          <input class="english" name="english" type="button"/>
+        </div>
       </div>
+      <header class="landing-header">The Kraken Inn</header>
+      <div class="tableform-container"></div>
+      <form id="tableform" name="tableform" action="">
+        <label id="name-lbl">Name*</label>
+        <input id="name" name="name" placeholder="Put Your Name" required/>
+        <label id="table-lbl" for="deck">Choose your table*
+        </label>
+        <select name="selectTable" id="SelectTable">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <input class="button" type="submit" value="Book" />
+      </form>
+    </div>
       <section class="ordersection"> 
         <p class="in-cart">Orders</p>
         <div class="orders">
@@ -56,20 +65,19 @@
         <div class="filter">
           
         </div>
-        <h1>Todays features</h1>
+        <h1 id=features-lbl>Todays features</h1>
         <div class="featured-grid">
       </section>
       
     </div>
     <footer class="footer">
-      <p>Images from Pixabay</p>
+      <p class="footer-lbl">Images from Pixabay</p>
     </footer>
   </body>
 
-  <script src="/js/db.js"></script>
-  <script src="/js/search.js"></script>
-  <script src="/js/products.js"></script>
-  <script src="/js/tables.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/search.js"></script>
+  <script src="./js/db.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/products.js"></script>
+  <script src="./js/tables.js"></script>
+  <script src="./js/main.js"></script>
   </html>
