@@ -17,9 +17,13 @@ orderproducts.eventHandlerMenu(listmenu);
 //remove orders
 //remove orders
 function removeOrder(e, x){
-
   bookings[0].orders.splice(x, 1)
-      bookings[0].showOrders(order);
+  bookings[0].showOrders(order);
+
+
+  if (bookings[0].orders.length == 0) {
+    sumTotal.innerText = '';
+  }
 }
 
 //to switch items in menu
@@ -28,7 +32,7 @@ function createprodcuts(e){
   if(e.target.textContent == 'Food'){
     orderproducts.createCards(0,cardContainer);
 }
-if(e.target.textContent == 'Snacks'){
+if(e.target.textContent == 'Sweets'){
   orderproducts.createCards(5,cardContainer);
 }
 if(e.target.textContent == 'Drinks'){
@@ -71,6 +75,7 @@ function styleCart() {
     e.preventDefault();
     getData(e.target);
     styleCart();
+    orderproducts.createCards(6,cardContainer);
   })
 
 

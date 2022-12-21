@@ -102,15 +102,15 @@ function search(e){
 for (var i = 0; i < food.length; i++) {
 searchFoods.push({name: food[i].id.toLowerCase()});
 }
-  let search = searchFoods.filter(option => option.name.startsWith(query.toLowerCase()));
+  let search = searchFoods.filter(option => option.name.includes(query.toLowerCase()));
   console.log(search)
   for(var a = 0; a < search.length; a++){
     console.log(query)
     for (var i = 0; i < food.length; i++){  
           if(search[a].name != food[i].id.toLowerCase()){
-          food[i].style.backgroundColor  = ""
+          food[i].style.display  = "none";
           }else{
-            food[i].style.backgroundColor = "blue";
+            food[i].style.display = "block";
           }
       }
   }
@@ -118,19 +118,9 @@ searchFoods.push({name: food[i].id.toLowerCase()});
   searchFoods.length = 0;
 }
 
-// function searchDrink() {
-//     let input = document.querySelector(".search-bar").value;
-//     input=input.toLowerCase();
-//     let drinks = document.getElementsByClassName('card');
-//     console.log()
 
-//     for (i = 0; i < drinks.length; i++){
-//         if (!drinks[i].innerHTML.toLowerCase().includes(input)) {
-//             console.log(drinks)
-//             drinks[i].style.display = 'none';
-//         } else {
-//             drinks[i].style.display = "card";
-//         }
-//     }
-// }
-// searchDrink();
+function clearSearch() {
+    if(query == '') {
+        orderproducts.createCards(5,cardContainer);
+    }
+}
