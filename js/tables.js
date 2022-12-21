@@ -40,6 +40,7 @@ class table{
         for (const item of this.orders) {
             sum = sum += item[1];
           }
-          console.log(sum);
+          console.log(sum); 
+          sumTotal.innerText = sum + " :-";
     }
 }
