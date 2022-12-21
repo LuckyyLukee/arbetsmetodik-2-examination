@@ -1,10 +1,11 @@
 //random variabels
 const cardContainer = document.querySelector('.featured-grid')
-const  btn = document.getElementsByClassName('add-to-cart');
+const  btn = document.getElementsByTagName('button');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
+const orders = document.querySelector('.ordersection');
 const bookings = [];
 //create object orderproducts
 let orderproducts = new products(db);
@@ -14,17 +15,17 @@ let orderproducts = new products(db);
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
 
-
 //remove orders
 //remove orders
 function removeOrder(e, x){
-  bookings[0].orders.splice(x, 1)
-  bookings[0].showOrders(order);
 
+  bookings[0].orders.splice(x, 1)
+      bookings[0].showOrders(order);
 
   if (bookings[0].orders.length == 0) {
     sumTotal.innerText = '';
-  }   
+    orders.style.visibility = 'hidden';
+  }
 }
 
 //to switch items in menu
@@ -32,25 +33,21 @@ function createprodcuts(e){
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.id == 'Food'){
     orderproducts.createCards(0,cardContainer);
-  }
-  if(e.target.id == 'Snacks'){
-    orderproducts.createCards(5,cardContainer);
-  }
-  if(e.target.id == 'Drinks'){
-    orderproducts.createCards(6,cardContainer);
-  }
-
-  orderproducts.eventHandlerBtns(btn)
-  
-  orderproducts.eventHandlerMenu(listmenu);
-// search();
 }
-
+if(e.target.id == 'Snacks'){
+  orderproducts.createCards(5,cardContainer);
+}
+if(e.target.id == 'Drinks'){
+  orderproducts.createCards(6,cardContainer);
+}
+orderproducts.eventHandlerBtns(btn);
+orderproducts.eventHandlerMenu(listmenu);
+}
 //Get the orders, do methods in table class
 function getProduct(product){
   bookings[0].getOrders(product.parentNode.getAttribute('id'), product.parentNode.getAttribute('price'));
   bookings[0].showOrders(order)
-} 
+ } 
 
 // get data from the form, create a object table in bookings array
 function getData(form) {
@@ -58,30 +55,30 @@ function getData(form) {
     let tablebooking = Object.fromEntries(formData);
     let booking = new table(tablebooking.name, tablebooking.selectTable);
     if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
-       console.log("finns redan")
-       alert("booked");
-      }else{
+      console.log("finns redan")
+      alert("booked");
+    } else{
         console.log("finns inte")
         bookings.push(booking);
       }
   }
 
+function styleCart() {
+  const bookVisibility = document.querySelector('.landing-page');
+  const featuresVisibility = document.querySelector('.featured > h1')
+  bookVisibility.style.visibility = "hidden";
+  featuresVisibility.style.visibility = "visible";
+}
 
 
-  function styleCart() {
-    const bookVisibility = document.querySelector('.landing-page');
-    const featuresVisibility = document.querySelector('.featured > h1')
-    bookVisibility.style.visibility = "hidden";
-    featuresVisibility.style.visibility = "visible";
-  }
-
-
-//eventlistener for the tablebooking
+  //eventlistener for the tablebooking
 document.getElementById("tableform").addEventListener("submit", function (e) {
   e.preventDefault();
   getData(e.target);
   styleCart();
 })
+
+
 
 
 const swedishButton = document.querySelector(".swedish");
