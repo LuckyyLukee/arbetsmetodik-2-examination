@@ -1,6 +1,6 @@
 //random variabels
 const cardContainer = document.querySelector('.featured-grid')
-const  btn = document.getElementsByTagName('button');
+const  btn = document.getElementsByClassName('add-to-cart');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
@@ -78,11 +78,11 @@ document.getElementById("tableform").addEventListener("submit", function (e) {
   styleCart();
 })
 
-
-
-
 const swedishButton = document.querySelector(".swedish");
 swedishButton.addEventListener("click", function() {
+
+  cardContainer.classList.add("swe");
+
   document.getElementById('Drinks').innerHTML = "Dryck";
   document.getElementById('Food').innerHTML = "Mat";
   document.getElementById('Snacks').innerHTML = "Fika";

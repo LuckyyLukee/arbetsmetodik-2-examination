@@ -20,6 +20,12 @@ class products{
         ]
     }
     createCards(number,maincontainer){
+        let btnName;
+        if (document.querySelector(".swe")) {
+            btnName = "Beställ"
+        } else {
+            btnName = "Order"
+        }
 
         let selectedTwelwe = this.db[this.filter[number]].slice(0, 12)
 
@@ -43,7 +49,7 @@ class products{
             </p>
             <span class="card-price">${price} Sek</span>
         </div>
-        <button class="add-to-cart">Add to cart</button>
+        <button class="add-to-cart">${btnName}</button>
         `;
         cardContainer.appendChild(card)
           });
