@@ -1,6 +1,6 @@
 //random variabels
 const cardContainer = document.querySelector('.featured-grid')
-const  btn = document.getElementsByTagName('button');
+const  btn = document.querySelectorAll('.add-to-cart');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
@@ -27,8 +27,9 @@ function getFeatured() {
   orderproducts.createFeaturedCards(6,cardContainer);
   orderproducts.createFeaturedCards(5,cardContainer);
 
-  orderproducts.eventHandlerBtns(btn);
-orderproducts.eventHandlerMenu(listmenu);
+
+    orderproducts.eventHandlerBtns(btn);
+    orderproducts.eventHandlerMenu(listmenu);
 }
 
 getFeatured();
@@ -57,7 +58,10 @@ if(e.target.id == 'Snacks'){
 if(e.target.id == 'Drinks'){
   orderproducts.createCards(6,cardContainer);
 }
-orderproducts.eventHandlerBtns(btn);
+
+btn.forEach(btn => {
+  orderproducts.eventHandlerBtns(btn);
+})
 orderproducts.eventHandlerMenu(listmenu);
 // search();
 }
