@@ -6,6 +6,8 @@ const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
 const orders = document.querySelector('.ordersection');
+const bookName = document.querySelector('.booking-name');
+const bookTable = document.querySelector('.booking-table')
 const bookings = [];
 
 //create object orderproducts
@@ -24,6 +26,12 @@ function calcMoms(sum,moms){
   return sumWithMoms
 }
 
+
+function calcMoms(sum,moms){
+  let sumWithMoms = sum * moms;
+  return sumWithMoms
+}
+
 function removeOrder(e, x){
   bookings[0].orders.splice(x, 1)
       bookings[0].showOrders(order);
@@ -36,6 +44,7 @@ function removeOrder(e, x){
 
 //to switch items in menu
 function createprodcuts(e){
+  
   
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.id == 'Food'){
@@ -75,8 +84,11 @@ function styleCart() {
   const featuresVisibility = document.querySelector('.featured > h1')
   bookVisibility.style.visibility = "hidden";
   featuresVisibility.style.visibility = "visible";
-  orders.append(bookings[0].showName())
+  bookName.append(bookings[0].showName())
   console.log(bookings[0].showName());
+  bookTable.append(bookings[0].showTable())
+  console.log(bookings[0].showTable());
+
 }
 
 
