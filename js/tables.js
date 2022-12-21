@@ -24,8 +24,12 @@ class table{
                 maincontainer.append(info[0]);
                 info[0].append(info[1])
                 this.totalSum();
-                console.log(this.name)
             }
+    }
+    showName(){
+        let info = this.createDom();
+        let name = info[2].innerhtml = this.name;
+        return name;
     }
     createDom(){
         let btn = document.createElement("BUTTON");
@@ -33,7 +37,8 @@ class table{
         btn.innerHTML = "X";
         let info = document.createElement("div");
         info.className = "info"
-        return [info, btn];
+        let p = document.createElement("p");
+        return [info, btn, p];
     }
 
     totalSum(){

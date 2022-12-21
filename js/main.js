@@ -7,16 +7,23 @@ const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
 const orders = document.querySelector('.ordersection');
 const bookings = [];
+
 //create object orderproducts
 let orderproducts = new products(db);
 //takes 2 parameters 1 for db one for drinks,bbq,exc
 
+
 //Create eventhandlers for btns and menu for products
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
+//remove orders
+//remove orders
 
-//remove orders
-//remove orders
+function calcMoms(sum,moms){
+  let sumWithMoms = sum * moms;
+  return sumWithMoms
+}
+
 function removeOrder(e, x){
   bookings[0].orders.splice(x, 1)
       bookings[0].showOrders(order);
@@ -29,6 +36,7 @@ function removeOrder(e, x){
 
 //to switch items in menu
 function createprodcuts(e){
+  
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.id == 'Food'){
     orderproducts.createCards(0,cardContainer);
@@ -41,7 +49,6 @@ if(e.target.id == 'Drinks'){
 }
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
-// search();
 }
 //Get the orders, do methods in table class
 function getProduct(product){
@@ -68,6 +75,8 @@ function styleCart() {
   const featuresVisibility = document.querySelector('.featured > h1')
   bookVisibility.style.visibility = "hidden";
   featuresVisibility.style.visibility = "visible";
+  orders.append(bookings[0].showName())
+  console.log(bookings[0].showName());
 }
 
 
