@@ -49,7 +49,7 @@ function removeOrder(e, x){
 //to switch items in menu
 function createprodcuts(e){
   document.querySelectorAll(".card").forEach(el => el.remove());
-  if(e.target.id == 'Food'){
+  if(e.target.id == 'Foods'){
     orderproducts.createCards(0,cardContainer);
 }
 if(e.target.id == 'Snacks'){
