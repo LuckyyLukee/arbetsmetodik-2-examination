@@ -24,6 +24,7 @@ class table{
                 maincontainer.append(info[0]);
                 info[0].append(info[1])
                 this.totalSum();
+                console.log(this.name)
             }
     }
     createDom(){
