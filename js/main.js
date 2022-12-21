@@ -38,13 +38,13 @@ function removeOrder(e, x){
 function createprodcuts(e){
   
   document.querySelectorAll(".card").forEach(el => el.remove());
-  if(e.target.textContent == 'Food'){
+  if(e.target.id == 'Food'){
     orderproducts.createCards(0,cardContainer);
 }
-if(e.target.textContent == 'Snacks'){
+if(e.target.id == 'Snacks'){
   orderproducts.createCards(5,cardContainer);
 }
-if(e.target.textContent == 'Drinks'){
+if(e.target.id == 'Drinks'){
   orderproducts.createCards(6,cardContainer);
 }
 orderproducts.eventHandlerBtns(btn);
@@ -62,27 +62,54 @@ function getData(form) {
     let tablebooking = Object.fromEntries(formData);
     let booking = new table(tablebooking.name, tablebooking.selectTable);
     if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
-       console.log("finns redan")
-       alert("booked");
-      }else{
+      console.log("finns redan")
+      alert("booked");
+    } else{
         console.log("finns inte")
         bookings.push(booking);
       }
   }
 
 function styleCart() {
-  const bookVisibility = document.querySelector('.tableform');
+  const bookVisibility = document.querySelector('.landing-page');
   const featuresVisibility = document.querySelector('.featured > h1')
-  bookVisibility.style.Visibility = "hidden";
-  featuresVisibility.style.Visibility = "visible";
+  bookVisibility.style.visibility = "hidden";
+  featuresVisibility.style.visibility = "visible";
+  orders.append(bookings[0].showName())
+  console.log(bookings[0].showName());
 }
 
 
   //eventlistener for the tablebooking
-  document.getElementById("tableform").addEventListener("submit", function (e) {
-    e.preventDefault();
-    getData(e.target);
-    styleCart();
-  })
+document.getElementById("tableform").addEventListener("submit", function (e) {
+  e.preventDefault();
+  getData(e.target);
+  styleCart();
+})
 
+
+
+
+const swedishButton = document.querySelector(".swedish");
+swedishButton.addEventListener("click", function() {
+  document.getElementById('Drinks').innerHTML = "Dryck";
+  document.getElementById('Food').innerHTML = "Mat";
+  document.getElementById('Snacks').innerHTML = "Fika";
+  document.getElementById('name-lbl').innerHTML = "Namn*";
+  document.getElementById('table-lbl').innerHTML = "Välj bord*";
+  document.getElementById('features-lbl').innerHTML = "Dagens Val";
+  document.getElementsByClassName('in-cart').innerHTML = "Ordrar";
+  document.getElementsByClassName('checkout-btn').innerHTML = "Till Kassan";
+  document.getElementsByClassName('footer-lbl').innerHTML = "Bilder från Pixabay";
+  const languagePage = document.querySelector('.language-container');
+  languagePage.style.visibility = "hidden";
+  languagePage.style.zIndex = "29";
+});
+
+const englishbutton = document.querySelector(".english")
+englishbutton.addEventListener("click", function() {
+  const languagePage = document.querySelector('.language-container');
+  languagePage.style.visibility = "hidden";
+  languagePage.style.zIndex = "29";
+});
 

@@ -26,13 +26,19 @@ class table{
                 this.totalSum();
             }
     }
+    showName(){
+        let info = this.createDom();
+        let name = info[2].innerhtml = this.name;
+        return name;
+    }
     createDom(){
         let btn = document.createElement("BUTTON");
         btn.className = 'btninfo'
         btn.innerHTML = "X";
         let info = document.createElement("div");
         info.className = "info"
-        return [info, btn];
+        let p = document.createElement("p");
+        return [info, btn, p];
     }
 
     totalSum(){
@@ -40,6 +46,7 @@ class table{
         for (const item of this.orders) {
             sum = sum += item[1];
           }
-          console.log(sum);
+          console.log(sum); 
+          sumTotal.innerText = sum + " :-";
     }
 }
