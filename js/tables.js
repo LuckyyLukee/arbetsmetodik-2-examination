@@ -3,6 +3,7 @@ class table{
         this.name = name;
         this.tablenumber = tablenumber;
         this.orders = [];
+        this.sum;
     }
     getTable(){
         console.log(this.name, this.tablenumber)
@@ -54,7 +55,12 @@ class table{
         for (const item of this.orders) {
             sum = sum += item[1];
           }
-          console.log(sum); 
-          sumTotal.innerText = sum + " :-";
+          this.sum = calcMoms(sum,1.25);
+          sumTotal.innerText =  calcMoms(sum,1.25) + " :-";
+    }
+    sendOrder(){
+        this.orders.splice(0, this.orders.length)
+        orders.style.visibility = 'hidden';
+        return this.sum;
     }
 }
