@@ -18,6 +18,7 @@ class products{
             "steaks",
             "our-foods"
         ]
+        this.total;
     }
     createCards(number,maincontainer){
         let selectedTwelwe = this.db[this.filter[number]].slice(0, 12)
@@ -42,7 +43,7 @@ selectedTwelwe.forEach(element => {
             </p>
             <span class="card-price">${price} sek</span>
         </div>
-        <button class="add-to-cart">Add to cart</button>
+        <button class="add-to-cart">Add to cart </button>
         `;
         cardContainer.appendChild(card)
           });
@@ -64,5 +65,17 @@ selectedTwelwe.forEach(element => {
                 })
                }
             }
+            eventHandlerCheckout(checkout){
+                var sum  = 0;
+                for (let i = 0; i < checkout.length; i++) {
+                    checkout[i].addEventListener("click", function (e) {
+                    sum = sum += bookings[0].sendOrder();
+                    let p = document.createElement("p");
+                    p.innerHTML = sum;
+                    carticon.appendChild(p);
+    
+                    })
+                   }
+                }
 
 }
