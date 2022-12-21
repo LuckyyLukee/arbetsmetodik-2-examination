@@ -48,44 +48,8 @@ class products{
         cardContainer.appendChild(card)
           });
     }
-    createFeaturedCards(number,maincontainer){
-        let ratedFive = this.db[this.filter[number]].filter(function (el) {
-            return el.rate == 5;
-        });
-
-        // Shuffle ratedFive array
-        const shuffled = ratedFive.sort(() => 0.5 - Math.random());
-
-        // Get sub-array of first 2 elements after shuffled
-        let selected = shuffled.slice(0, 2);
-
-        selected.forEach(element => {
-            let card = document.createElement("div");
-            card.classList.add("card")
-            let {id, img, name, dsc, price, rate} = element;
-            card.setAttribute("id", name,)
-            card.setAttribute("price" , price)
-                card.innerHTML = `
-            <img
-                class="card-img"
-                src=${img}
-                alt=${name}
-            />
-            <div class="card-text">
-                <h2>${name}</h2>
-                <p>rating: ${rate}</p>
-                <p>
-                ${dsc}
-                </p>
-                <span class="card-price">${price} Sek</span>
-            </div>
-            <button class="add-to-cart">Add to cart</button>
-            `;
-            cardContainer.appendChild(card)
-              });
-        }
     eventHandlerBtns(btns){
-        for (let i = 0; i < btn.length; i++) {
+        for (let i = 0; i < btns.length; i++) {
             btn[i].addEventListener("click", function (e) {
             getProduct(e.target);
             let orders = document.querySelector(".ordersection");

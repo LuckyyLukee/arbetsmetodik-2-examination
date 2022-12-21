@@ -1,6 +1,6 @@
 //random variabels
 const cardContainer = document.querySelector('.featured-grid')
-const  btn = document.querySelectorAll('.add-to-cart');
+const  btn = document.getElementsByClassName('add-to-cart');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
@@ -14,25 +14,6 @@ let orderproducts = new products(db);
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
 
-const h1 = document.querySelector("h1");
-
-h1.addEventListener("click", (e) => {
-  getFeatured(e)
-})
-
-function getFeatured() {
-  document.querySelectorAll(".card").forEach(el => el.remove());
-
-  orderproducts.createFeaturedCards(0,cardContainer);
-  orderproducts.createFeaturedCards(6,cardContainer);
-  orderproducts.createFeaturedCards(5,cardContainer);
-
-
-    orderproducts.eventHandlerBtns(btn);
-    orderproducts.eventHandlerMenu(listmenu);
-}
-
-getFeatured();
 
 //remove orders
 //remove orders
@@ -51,18 +32,17 @@ function createprodcuts(e){
   document.querySelectorAll(".card").forEach(el => el.remove());
   if(e.target.id == 'Food'){
     orderproducts.createCards(0,cardContainer);
-}
-if(e.target.id == 'Snacks'){
-  orderproducts.createCards(5,cardContainer);
-}
-if(e.target.id == 'Drinks'){
-  orderproducts.createCards(6,cardContainer);
-}
+  }
+  if(e.target.id == 'Snacks'){
+    orderproducts.createCards(5,cardContainer);
+  }
+  if(e.target.id == 'Drinks'){
+    orderproducts.createCards(6,cardContainer);
+  }
 
-btn.forEach(btn => {
-  orderproducts.eventHandlerBtns(btn);
-})
-orderproducts.eventHandlerMenu(listmenu);
+  orderproducts.eventHandlerBtns(btn)
+  
+  orderproducts.eventHandlerMenu(listmenu);
 // search();
 }
 
