@@ -34,7 +34,7 @@ function createprodcuts(e){
   if(e.target.textContent == 'Food'){
     orderproducts.createCards(0,cardContainer);
 }
-if(e.target.textContent == 'Snacks'){
+if(e.target.textContent == 'Sweets'){
   orderproducts.createCards(5,cardContainer);
 }
 if(e.target.textContent == 'Drinks'){
