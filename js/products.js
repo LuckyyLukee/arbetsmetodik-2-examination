@@ -69,11 +69,13 @@ selectedTwelwe.forEach(element => {
                 var sum  = 0;
                 for (let i = 0; i < checkout.length; i++) {
                     checkout[i].addEventListener("click", function (e) {
+                    document.querySelectorAll(".p-total").forEach(el => el.remove());
                     sum = sum += bookings[0].sendOrder();
                     let p = document.createElement("p");
+                    p.className="p-total";
                     p.innerHTML = sum;
                     carticon.appendChild(p);
-    
+
                     })
                    }
                 }
