@@ -20,11 +20,10 @@
         <ul class="nav-list">
           <li class="list-item" id="Drinks">Drinks</li>
           <li class="list-item" id="Food">Food</li>
-          <li class="list-item" id="Snacks">Sweets</li>
+          <li class="list-item" id="Snacks">Snacks</li>
         </ul>
       </nav>
-      <div class="search-bar-div"><img class="search-bar-icon"src="./img/treasure-map.png" alt="searchbar icon" width = "50px" height="50px"><input type="text" class="search-bar" placeholder="Search" /></div>
-      <div class="search-results"><ul class="list"></ul></div>
+      <div class="search-bar-div"><img class="search-bar-icon"src="/img/treasure-map.png" alt="searchbar icon" width = "50px" height="50px"><input type="text" class="search-bar" placeholder="Search" /></div>
     </header>
     <div class="landing-page">
       <div class="language-container">
@@ -35,22 +34,22 @@
       </div>
       <header class="landing-header">The Kraken Inn</header>
       <div class="tableform-container"></div>
-        <form id="tableform" name="tableform" action="">
-          <label id="name-lbl">Name*</label>
-          <input id="name" name="name" placeholder="Put Your Name" required/>
-          <label id="table-lbl" for="deck">Choose your table*
-          </label>
-          <select name="selectTable" id="SelectTable">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-          <input class="button" type="submit" value="Book" />
-        </form>
-      </div>
+      <form id="tableform" name="tableform" action="">
+        <label id="name-lbl">Name*</label>
+        <input id="name" name="name" placeholder="Put Your Name" required/>
+        <label id="table-lbl" for="deck">Choose your table*
+        </label>
+        <select name="selectTable" id="SelectTable">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <input class="button" type="submit" value="Book" />
+      </form>
+    </div>
       <section class="ordersection"> 
         <p class="in-cart">Orders</p>
         <div class="orders">
@@ -60,12 +59,11 @@
         <p class="sum-total"></p>
         <button class="checkout-btn">Check Out</button>
       </section>
-      
       <section class="featured">
         <div class="filter">
           
         </div>
-        <h1 id="features-lbl">Todays features</h1>
+        <h1 id=features-lbl>Todays features</h1>
         <div class="featured-grid">
       </section>
       
@@ -76,8 +74,8 @@
   </body>
 
   <script src="./js/db.js"></script>
+  <script src="./js/search.js"></script>
   <script src="./js/products.js"></script>
   <script src="./js/tables.js"></script>
   <script src="./js/main.js"></script>
-  <script src="./js/search.js"></script>
   </html>

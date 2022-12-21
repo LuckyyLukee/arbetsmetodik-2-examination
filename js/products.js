@@ -34,11 +34,11 @@ class products{
         />
         <div class="card-text">
             <h2>${name}</h2>
-            <p>Rating: ${rate}</p>
+            <p>rating: ${rate}</p>
             <p>
-            ${dsc}.
+            ${dsc}
             </p>
-            <span class="card-price">${price} sek</span>
+            <span class="card-price">${price} Sek</span>
         </div>
         <button class="add-to-cart">Add to cart</button>
         `;
@@ -49,7 +49,7 @@ class products{
         for (let i = 0; i < btn.length; i++) {
             btn[i].addEventListener("click", function (e) {
             getProduct(e.target);
-            let orders = document.querySelector(".ordersection");
+            // let orders = document.querySelector(".ordersection");
             orders.style.visibility = "visible";
             })
            }

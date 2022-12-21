@@ -5,6 +5,7 @@ const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
 const sumTotal = document.querySelector('.sum-total');
+const orders = document.querySelector('.ordersection');
 const bookings = [];
 //create object orderproducts
 let orderproducts = new products(db);
@@ -20,6 +21,11 @@ function removeOrder(e, x){
 
   bookings[0].orders.splice(x, 1)
       bookings[0].showOrders(order);
+
+  if (bookings[0].orders.length == 0) {
+    sumTotal.innerText = '';
+    orders.style.visibility = 'hidden';
+  }
 }
 
 //to switch items in menu
@@ -36,7 +42,6 @@ if(e.target.id == 'Drinks'){
 }
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
-// search();
 }
 //Get the orders, do methods in table class
 function getProduct(product){
@@ -50,28 +55,33 @@ function getData(form) {
     let tablebooking = Object.fromEntries(formData);
     let booking = new table(tablebooking.name, tablebooking.selectTable);
     if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
-       console.log("finns redan")
-       alert("booked");
-      }else{
+      console.log("finns redan")
+      alert("booked");
+      const form = document.querySelector('.landing-page');
+      form.style.visibility = "hidden";
+    } else{
         console.log("finns inte")
         bookings.push(booking);
       }
   }
 
 function styleCart() {
-  const bookVisibility = document.querySelector('.landing-page');
+  const bookVisibility = document.querySelector('.tableform');
   const featuresVisibility = document.querySelector('.featured > h1')
-  bookVisibility.style.visibility = "hidden";
-  featuresVisibility.style.visibility = "visible";
+  bookVisibility.style.Visibility = "hidden";
+  featuresVisibility.style.Visibility = "visible";
 }
 
 
   //eventlistener for the tablebooking
-  document.getElementById("tableform").addEventListener("submit", function (e) {
-    e.preventDefault();
-    getData(e.target);
-    styleCart();
-  })
+document.getElementById("tableform").addEventListener("submit", function (e) {
+  e.preventDefault();
+  getData(e.target);
+  styleCart();
+})
+
+
+
 
 const swedishButton = document.querySelector(".swedish");
 swedishButton.addEventListener("click", function() {
