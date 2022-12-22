@@ -14,9 +14,9 @@ const bookings = [];
 const food = document.getElementsByClassName('card');
 const bookVisibility = document.querySelector('.landing-page');
 const featuresVisibility = document.querySelector('.featured > h1')
-const swedishButton = document.querySelector(".swedish");
-const englishbutton = document.querySelector(".english")
 const languagePage = document.querySelector('.language-container');
+const englishbutton = document.querySelector(".english")
+const swedishButton = document.querySelector(".swedish");
 
 //Create eventhandlers for btns and menu for products
 let orderproducts = new products(db);
@@ -58,7 +58,9 @@ document.getElementById("tableform").addEventListener("submit", function (e) {
 })
 
 //translate
-swedishButton.addEventListener("click", function () {
+swedishButton.addEventListener("click", function() {
+  cardContainer.classList.add("swe");
+  
   document.getElementById('Drinks').innerHTML = "Dryck";
   document.getElementById('Foods').innerHTML = "Mat";
   document.getElementById('Snacks').innerHTML = "Fika";
@@ -70,11 +72,16 @@ swedishButton.addEventListener("click", function () {
   document.getElementsByClassName('in-cart').innerHTML = "Ordrar";
   document.getElementsByClassName('checkout-btn').innerHTML = "Beställ";
   document.getElementsByClassName('footer-lbl').innerHTML = "Bilder från Pixabay";
+  const languagePage = document.querySelector('.language-container');
   languagePage.style.visibility = "hidden";
   languagePage.style.zIndex = "29";
+
+  input.placeholder = "sök"
+
 });
 
-englishbutton.addEventListener("click", function () {
+englishbutton.addEventListener("click", function() {
+  const languagePage = document.querySelector('.language-container');
   languagePage.style.visibility = "hidden";
   languagePage.style.zIndex = "29";
 });

@@ -21,13 +21,19 @@ class products {
         this.total;
     }
     createCards(number, maincontainer) {
+        let btnName;
+        if (document.querySelector(".swe")) {
+            btnName = "Beställ"
+        } else {
+            btnName = "Order"
+        }
         this.db[this.filter[number]].slice(0, 12).forEach(element => {
-            let card = document.createElement("div");
-            card.classList.add("card")
-            let { id, img, name, dsc, price, rate } = element;
-            card.setAttribute("data-product", id,)
-            card.setAttribute("id", name,)
-            card.setAttribute("price", price)
+        let card = document.createElement("div");
+        card.classList.add("card")
+        let {id, img, name, dsc, price, rate} = element;
+        card.setAttribute("data-product", id,)
+        card.setAttribute("id", name,)
+        card.setAttribute("price" , price)
             card.innerHTML = `
         <img
             class="card-img"
@@ -42,10 +48,10 @@ class products {
             </p>
             <span class="card-price">${price} sek</span>
         </div>
-        <button class="add-to-cart">Add to cart </button>
+        <button class="add-to-cart">${btnName} </button>
         `;
-            cardContainer.appendChild(card)
-        });
+        cardContainer.appendChild(card)
+          });
     }
     eventHandlerBtns(btns) {
         for (let i = 0; i < btn.length; i++) {
