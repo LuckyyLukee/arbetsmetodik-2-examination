@@ -1,7 +1,7 @@
-//random variabels
+//All the queryselectors
 const cardContainer = document.querySelector('.featured-grid')
-const  btn = document.getElementsByClassName('add-to-cart');
-const  checkoutbtn = document.getElementsByClassName('checkout-btn');
+const btn = document.getElementsByClassName('add-to-cart');
+const checkoutbtn = document.getElementsByClassName('checkout-btn');
 const tableform = document.querySelector('tableform')
 const listmenu = document.querySelectorAll('li');
 const order = document.querySelector('.orders');
@@ -11,102 +11,56 @@ const bookName = document.querySelector('.booking-name');
 const bookTable = document.querySelector('.booking-table');
 const carticon = document.querySelector('.cart-icons');
 const bookings = [];
-
-
-//create object orderproducts
-let orderproducts = new products(db);
-//takes 2 parameters 1 for db one for drinks,bbq,exc
-
+const food = document.getElementsByClassName('card');
+const bookVisibility = document.querySelector('.landing-page');
+const featuresVisibility = document.querySelector('.featured > h1')
+const languagePage = document.querySelector('.language-container');
+const englishbutton = document.querySelector(".english")
+const swedishButton = document.querySelector(".swedish");
 
 //Create eventhandlers for btns and menu for products
+let orderproducts = new products(db);
 orderproducts.eventHandlerBtns(btn);
 orderproducts.eventHandlerMenu(listmenu);
 orderproducts.eventHandlerCheckout(checkoutbtn);
-//remove orders
-//remove orders
-
-function calcMoms(sum,moms){
-  let sumWithMoms = sum * moms;
-  return sumWithMoms
-}
 
 
-function calcMoms(sum,moms){
-  let sumWithMoms = sum * moms;
-  return sumWithMoms
-}
-
-function removeOrder(e, x){
-  bookings[0].orders.splice(x, 1)
-      bookings[0].showOrders(order);
-
-  if (bookings[0].orders.length == 0) {
-    sumTotal.innerText = '';
-    orders.style.visibility = 'hidden';
-  }
-}
-
-//to switch items in menu
-function createprodcuts(e){
-  document.querySelectorAll(".card").forEach(el => el.remove());
-  if(e.target.id == 'Foods'){
-    orderproducts.createCards(0,cardContainer);
-}
-if(e.target.id == 'Snacks'){
-  orderproducts.createCards(5,cardContainer);
-}
-if(e.target.id == 'Drinks'){
-  orderproducts.createCards(6,cardContainer);
-}
-orderproducts.eventHandlerBtns(btn);
-orderproducts.eventHandlerMenu(listmenu);
-}
-//Get the orders, do methods in table class
-function getProduct(product){
+//Get the orders, do methods from table class
+function getProduct(product) {
   bookings[0].getOrders(product.parentNode.getAttribute('id'), product.parentNode.getAttribute('price'));
   bookings[0].showOrders(order)
- } 
+}
 
 // get data from the form, create a object table in bookings array
 function getData(form) {
-    let formData = new FormData(form);
-    let tablebooking = Object.fromEntries(formData);
-    let booking = new table(tablebooking.name, tablebooking.selectTable);
-    if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
-      console.log("finns redan")
-      alert("booked");
-    } else{
-        console.log("finns inte")
-        bookings.push(booking);
-      }
+  let formData = new FormData(form);
+  let tablebooking = Object.fromEntries(formData);
+  let booking = new table(tablebooking.name, tablebooking.selectTable);
+  if (bookings.some(e => e.tablenumber === tablebooking.selectTable)) {
+    alert("booked");
+  } else {
+    bookings.push(booking);
   }
+}
 
 function styleCart() {
-  const bookVisibility = document.querySelector('.landing-page');
-  const featuresVisibility = document.querySelector('.featured > h1')
   bookVisibility.style.visibility = "hidden";
   featuresVisibility.style.visibility = "visible";
   bookName.append(bookings[0].showName())
-  console.log(bookings[0].showName());
   bookTable.append(bookings[0].showTable())
-  console.log(bookings[0].showTable());
-
 }
 
-
-  //eventlistener for the tablebooking
+//eventlistener for the tablebooking
 document.getElementById("tableform").addEventListener("submit", function (e) {
   e.preventDefault();
   getData(e.target);
   styleCart();
-  // orderproducts.createCards(6,cardContainer);
 })
 
-
-
-
-const swedishButton = document.querySelector(".swedish");
+//translate
 swedishButton.addEventListener("click", function() {
+  cardContainer.classList.add("swe");
+  
   document.getElementById('Drinks').innerHTML = "Dryck";
   document.getElementById('Foods').innerHTML = "Mat";
   document.getElementById('Snacks').innerHTML = "Fika";
@@ -121,9 +75,11 @@ swedishButton.addEventListener("click", function() {
   const languagePage = document.querySelector('.language-container');
   languagePage.style.visibility = "hidden";
   languagePage.style.zIndex = "29";
+
+  input.placeholder = "sök"
+
 });
 
-const englishbutton = document.querySelector(".english")
 englishbutton.addEventListener("click", function() {
   const languagePage = document.querySelector('.language-container');
   languagePage.style.visibility = "hidden";
